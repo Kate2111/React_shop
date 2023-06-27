@@ -1,0 +1,23 @@
+$title: #363838;
+
+.tab{
+    border: 1px solid  rgba(#454647, .5);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #8F8D8D;
+    padding: 6px 16px;
+    background-color: transparent;
+    &:hover{
+        background: #FFEF35;
+        transition: all .4s;
+        cursor: pointer;
+    }
+    &--active {
+        border: 1px solid #FFEF35;
+        background: #FFEF35;
+        color: $title;
+    }
+}
