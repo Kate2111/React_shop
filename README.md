@@ -7,3 +7,5 @@
 - react-slick
 - SASS / CSS Modules
 - Axios
+- AliExpress API
+- Webpack
