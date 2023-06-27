@@ -9,3 +9,5 @@
 - Axios
 - AliExpress API
 - Webpack
+
+https://kate2111.github.io/React_shop/
