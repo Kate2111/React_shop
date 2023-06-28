@@ -1,0 +1,32 @@
+@import 'src/assets/styles/_variables';
+
+
+.item{
+    padding-left: 35px;
+    padding-right: 45px;
+}
+.link{
+    @extend %title-menu;
+    text-align: center;
+    color: rgba(54, 56, 56, 0.9033);
+    line-height: 22px;
+}
+.link:hover{
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    border-radius: 1px;
+}
+.link--active{
+    padding-bottom: 4px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        background: rgba($title, .7);
+        border-radius: 1px;
+        height: 2px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}

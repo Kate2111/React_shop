@@ -1,4 +1,4 @@
-$title: #363838;
+@import 'src/assets/styles/_variables';
 
 .tab{
     border: 1px solid  rgba(#454647, .5);
@@ -15,9 +15,10 @@ $title: #363838;
         transition: all .4s;
         cursor: pointer;
     }
-    &--active {
-        border: 1px solid #FFEF35;
-        background: #FFEF35;
-        color: $title;
-    }
+}
+
+.active {
+    border: 1px solid #FFEF35;
+    background: #FFEF35;
+    color: $title;
 }

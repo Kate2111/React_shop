@@ -1,0 +1,21 @@
+@import 'src/assets/styles/_variables';
+
+
+.social{
+    width: 125px;
+    margin-left: 100px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item{
+    display: flex;
+    gap: 14px;
+}
+
+.link{
+    @extend %footer-link;
+}
+

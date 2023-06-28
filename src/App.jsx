@@ -1,16 +1,14 @@
-import './App.scss';
-import MainPage from './components/main/MainPage';
-import Navbar from './components/navbar/Navbar';
+import { LocalStorage } from './services/LocalStorage/localStorage.service'
+import LayoutPage from './components/layout/LayoutPage';
+import MainPage from './pages/main_page/MainPage';
+
+LocalStorage.get('foo');
 
 function App() {
   return (<>
-    <div className="wrapper">
-        <Navbar/>
-
-        <div className="main">
-            <MainPage/>
-        </div>
-    </div>
+    <LayoutPage>
+      <MainPage/>
+    </LayoutPage>
   </>
   );
 }

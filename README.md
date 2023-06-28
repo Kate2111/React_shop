@@ -10,4 +10,6 @@
 - AliExpress API
 - Webpack
 
+рефакторинг кода, изначально проект был написан на чистом js, html, css
+
 https://kate2111.github.io/React_shop/
