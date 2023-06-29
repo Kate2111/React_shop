@@ -1,0 +1,15 @@
+@import 'src/assets/styles/_variables';
+
+.blog {
+    padding-bottom: 100px;
+}
+
+.title{
+    color: $title;
+    @extend %title-menu;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 29px;
+    text-align: center;
+    min-width: 430px; 
+}

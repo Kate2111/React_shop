@@ -21,3 +21,21 @@ module.exports = {
     }
   },
 };
+
+/* {
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@components": "./src/components",
+        "@styles": "./src/styles"
+      }
+    }],
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": "scss"
+    }]
+  ]
+}
+
+ */

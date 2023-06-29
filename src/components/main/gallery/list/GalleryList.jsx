@@ -1,44 +1,39 @@
 import React from 'react';
 import style from './Gallery.module.scss';
-import { importWebp } from '@/utils/importAll';
 
 
 const GalleryList = ({active}) => {
     const gallery = [
-        { category: 'Bedroom furniture', images: ['img_1', 'img_2', 'img_3', 'img_4', 'img_5'] },
-        { category: 'Living room furniture', images: ['img_1', 'img_2', 'img_3', 'img_4', 'img_5']},
-        { category: 'Office furniture', images: ['img_1', 'img_2', 'img_3', 'img_4', 'img_5']},
-        { category: 'Dining_room_futniture', images: ['img_1', 'img_2', 'img_3', 'img_4', 'img_5']},
-        { category: 'Chair', images: ['img_1', 'img_2', 'img_3', 'img_4', 'img_5']},
+        { category: 'Bedroom furniture', images: ['img_1.jpg', 'img_2.jpg', 'img_3.jpg', 'img_4.jpg', 'img_5.jpg'] },
+        { category: 'Living room furniture', images: ['img_1.jpg', 'img_2.webp', 'img_3.jpg', 'img_4.jpg', 'img_5.jpg']},
+        { category: 'Office furniture', images: ['img_1.jpg', 'img_2.webp', 'img_3.jpg', 'img_4.webp', 'img_5.jpg']},
+        { category: 'Dining_room_futniture', images: ['img_1.jpg', 'img_2.webp', 'img_3.jpg', 'img_4.jpg', 'img_5.webp']},
+        { category: 'Chair', images: ['img_1.jpg', 'img_2.webp', 'img_3.webp', 'img_4.webp', 'img_5.webp']},
     ]
-
-   
-    const imagesAll = importWebp(require.context(`@assets/images/first_page/gallery/Bedroom furniture`, false, /\.(jpe?g|webp)$/));
-  
 
     return (
         <>
-            {
-                gallery.map(({ category, images }, index) => {
-                   
+            { 
+                 gallery.map(({ category, images }, index) => {
                     if(index === active) {
                         return <div className={`${style.item} ${style.active}`} key={category}>
                                 {
                                     images.map((image) => {
                                         return <img
-                                        className={style[`img${image === images[0] ? '-main' : ''}`]}
-                                        src={imagesAll[image]}
-                                        alt={category}
-                                        key={image}
-                                        />
+                                                    className={style[`img${image === images[0] ? '-main' : ''}`]}
+                                                    src={require(`@assets/images/first_page/gallery/${category}/${image}`)}
+                                                    alt={category}
+                                                    key={image}
+                                                />
                                     })
                                 }
                             </div>
                     }
-                })
-            }
+                }) 
+            } 
         </>
     );
 };
 
 export default GalleryList;
+

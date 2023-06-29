@@ -1,0 +1,39 @@
+@import '@assets/styles/_variables';
+
+
+.collection {
+    margin-top: 31px;
+    padding-bottom: 105px;
+}
+
+.header{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 36px;
+    line-height: 51px;
+    @extend %title-menu;
+    color: $title;
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    &::before{
+        content: '';
+        position: absolute;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: #979797;
+        width: 252px;
+    }
+}
+
+.text{
+    max-width: 730px;
+    margin: 0 auto 30px;
+}
+   

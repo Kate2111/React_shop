@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './Collection.module.scss';
 import CollectionItem from './CollectionItem';
 import {importPng} from '@/utils/importAll'
 
@@ -16,7 +17,7 @@ const CollectionList = () => {
     const images = importPng(require.context('@assets/images/first_page/collection', false, /\.png$/));
 
     return (
-        <div className="collection__items">
+        <div className={style.items}>
             {
                 collections.map(collection => {
                     return <CollectionItem
