@@ -1,13 +1,11 @@
 import React from 'react';
 import './mainPage.scss';
-import style from '../../components/UI/button/MyButtonTab.module.scss';
-import Slider from '../../components/slider/Slider';
-import sliderBg from '../../assets/images/first_page/main_slider.jpg'
-import CollectionList from '../../components/main/collection/CollectionList';
-import MyButtonTab from '../../components/UI/button/MyButtonTab';
-import GalleryList from '../../components/main/gallery/GalleryList';
+import style from '@components/UI/button/MyButtonTab.module.scss';
+import Slider from '@components/slider/Slider';
+import sliderBg from '@assets/images/first_page/main_slider.jpg'
+import CollectionList from '@components/main/collection/CollectionList';
+import GallerySection from '../../components/main/gallery/section/GallerySection';
 
-console.log(style);
 
 const MainPage = () => {
     return (<>
@@ -45,56 +43,7 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="gallery">
-        <div className="container-fluid">
-          <div className="gallery__tabs">
-            <MyButtonTab>Bedroom furniture</MyButtonTab>
-            <MyButtonTab>Living room furniture</MyButtonTab>
-            <MyButtonTab>Office furniture</MyButtonTab>
-            <MyButtonTab className={style.active}>Dining room futniture</MyButtonTab>
-            <MyButtonTab>Chair</MyButtonTab>
-         
-          </div>
-          <div className="gallery__items">
-            <GalleryList/>
-            {/* <div className="gallery__item">
-              <img className="gallery__img-main" src="./img/first_page/gallery/Bedroom furniture/Kyle+4-door+Solid+Wood+Wardrobe+Armoire.jpg" alt="Bedroom furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Bedroom furniture/img_1.jpg" alt="Bedroom furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Bedroom furniture/img_2.jpg" alt="Bedroom furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Bedroom furniture/img_3.jpg" alt="Bedroom furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Bedroom furniture/img_4.jpg" alt="Bedroom furniture"/>
-            </div>
-            <div className="gallery__item  gallery__item--active">
-              <img className="gallery__img-main" src="./img/first_page/gallery/Living room furniture/img_1.jpg" alt="Living_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Living room furniture/Natsuko+85.4_+W+Velvet+Square+Arm+Sofa.webp" alt="Living_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Living room furniture/img_4.jpg" alt="Living_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Living room furniture/Caleb-Ryan+Coffee+Table.jpg" alt="Living_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Living room furniture/img_5.jpg" alt="Living_room"/>
-            </div>
-            <div className="gallery__item">
-              <img className="gallery__img-main" src="./img/first_page/gallery/Office furniture/Faye+Ergonomic+Task+Chair.jpg" alt="Office_furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Office furniture/Nido+15.82''+Wide+4+-Drawer+Vertical+Filing+Cabinet.webp" alt="Office_furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Office furniture/img_2.jpg" alt="Office_furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Office furniture/img_1.jpg" alt="Office_furniture"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Office furniture/img_5.jpg" alt="Office_furniture"/> 
-            </div>
-            <div className="gallery__item">
-              <img className="gallery__img-main" src="./img/first_page/gallery/Dining_room_futniture/Isabelle+30''+Wide+China+Cabinet.jpg" alt="Dining_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Dining_room_futniture/17+Stories+Bartell+Metal+Fruit+Bowl.webp" alt="Dining_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Dining_room_futniture/img_3.jpg" alt="Dining_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Dining_room_futniture/Winona+Butterfly+Leaf+Dining+Set.jpg" alt="Dining_room"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Dining_room_futniture/Putnam+Side+Chair.webp" alt="Dining_room"/>
-            </div>
-            <div className="gallery__item">
-              <img className="gallery__img-main" src="./img/first_page/gallery/Chair/Hurma+Rocking+Chair.jpg" alt="Chair"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Chair/Delzora+Upholstered+Accent+Chair+with+Metal+Legs (1).webp" alt="Chair"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Chair/Hendrix+Upholstered+Barrel+Chair.webp" alt="Chair"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Chair/Jamyre+26_+Wide+Velvet+Barrel+Chair+and+Ottoman.webp" alt="Chair"/>
-              <img className="gallery__img" src="./img/first_page/gallery/Chair/Jazouli+Upholstered+Barrel+Chair.webp" alt="Chair"/>
-            </div>*/}
-          </div> 
-        </div>
-      </section>
+      <GallerySection/>
 
       <section className="block-box">
         <div className="container">

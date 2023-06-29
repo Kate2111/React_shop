@@ -13,3 +13,6 @@ export const importWebp = (requireContext) => requireContext.keys().reduce((acc,
     acc[next.replace("./", "").replace(/\.(jpg|webp)$/, "")] = requireContext(next);
     return acc;
 }, {});
+
+  
+  

@@ -1,6 +1,6 @@
 import React from 'react';
 import CollectionItem from './CollectionItem';
-import {importPng} from '../../../utils/importAll'
+import {importPng} from '@/utils/importAll'
 
 
 
@@ -13,7 +13,7 @@ const CollectionList = () => {
         {href: './about.html', name: 'img_5', title: 'Truffaut literally trust', text: 'Living room furntiture | Chair'}
     ]
 
-    const images = importPng(require.context('../../../assets/images/first_page/collection', false, /\.png$/));
+    const images = importPng(require.context('@assets/images/first_page/collection', false, /\.png$/));
 
     return (
         <div className="collection__items">

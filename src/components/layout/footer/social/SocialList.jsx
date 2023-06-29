@@ -1,19 +1,19 @@
 import React from 'react';
-import {importSvg} from '../../../../utils/importAll'
+import {importSvg} from '@/utils/importAll'
 import style from './SocialList.module.scss'
 
 
 const SocialList = () => {
 
     const social = [
-        {name: "Facebook", href: "#"},
-        {name: "Instagram", href: "#"},
-        {name: "Pinterest", href: "#"},
-        {name: "WhatsApp", href: "#"},
-        {name: "YouTube", href: "#"}
+        {name: "Facebook", href: "./about"},
+        {name: "Instagram", href: "./about"},
+        {name: "Pinterest", href: "./about"},
+        {name: "WhatsApp", href: "./about"},
+        {name: "YouTube", href: "./about"}
     ]
  
-    const images = importSvg(require.context('../../../../assets/images/first_page/icon', false, /\.svg$/));
+    const images = importSvg(require.context('@assets/images/first_page/icon', false, /\.svg$/));
 
     return (
         <ul className={style.social}>
