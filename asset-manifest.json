@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/React_shop/static/css/main.f180145c.css",
-    "main.js": "/React_shop/static/js/main.ddb49a5e.js",
+    "main.js": "/React_shop/static/js/main.8d61b077.js",
     "static/js/787.affa5bbf.chunk.js": "/React_shop/static/js/787.affa5bbf.chunk.js",
     "static/media/decor_bg.jpg": "/React_shop/static/media/decor_bg.b38674e38514e0d9a84a.jpg",
     "static/media/main_slider.jpg": "/React_shop/static/media/main_slider.7934e72ad9c8f2100986.jpg",
     "static/media/img_3.jpg": "/React_shop/static/media/img_3.dd9018c53e4cd42a02b8.jpg",
     "static/media/img_1.png": "/React_shop/static/media/img_1.d60f920ea8fbf1b1219a.png",
     "static/media/img_2.png": "/React_shop/static/media/img_2.1bcd822e0651cbdd3dcf.png",
+    "static/media/img_1.jpg": "/React_shop/static/media/img_1.55f08606158e9b5209ee.jpg",
     "static/media/img_4.png": "/React_shop/static/media/img_4.8804daec08fae2dbe147.png",
     "static/media/img_2.jpg": "/React_shop/static/media/img_2.704bf9ba903e93beb310.jpg",
     "static/media/img_3.png": "/React_shop/static/media/img_3.96d56efcf37d48d351b4.png",
@@ -17,7 +18,6 @@
     "static/media/img_4.jpg": "/React_shop/static/media/img_4.4324b6b4ac23d2b8f6a6.jpg",
     "static/media/4+Drawer+Vertical+Storage+Dresser+with+Wood+Top+&+Fabric+Pull+Drawers.webp": "/React_shop/static/media/4+Drawer+Vertical+Storage+Dresser+with+Wood+Top+&+Fabric+Pull+Drawers.285875242fd4f6779cc5.webp",
     "static/media/img_6.jpg": "/React_shop/static/media/img_6.6448e886e51127bcb3ff.jpg",
-    "static/media/img_1.jpg": "/React_shop/static/media/img_1.55f08606158e9b5209ee.jpg",
     "static/media/Rowlands+Solid+++Manufactured+Wood+Nightstand.webp": "/React_shop/static/media/Rowlands+Solid+++Manufactured+Wood+Nightstand.0b679d7ee492a60e974b.webp",
     "static/media/work-path_1.svg": "/React_shop/static/media/work-path_1.93b428cc2c8f986d4efd.svg",
     "static/media/work-path_3.svg": "/React_shop/static/media/work-path_3.34098181a789aeef512a.svg",
@@ -31,11 +31,11 @@
     "static/media/envelope.svg": "/React_shop/static/media/envelope.698c86b023970e345163.svg",
     "static/media/Facebook.svg": "/React_shop/static/media/Facebook.d0d508953f23535594ab.svg",
     "main.f180145c.css.map": "/React_shop/static/css/main.f180145c.css.map",
-    "main.ddb49a5e.js.map": "/React_shop/static/js/main.ddb49a5e.js.map",
+    "main.8d61b077.js.map": "/React_shop/static/js/main.8d61b077.js.map",
     "787.affa5bbf.chunk.js.map": "/React_shop/static/js/787.affa5bbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f180145c.css",
-    "static/js/main.ddb49a5e.js"
+    "static/js/main.8d61b077.js"
   ]
 }
