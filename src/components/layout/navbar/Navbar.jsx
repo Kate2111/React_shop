@@ -2,8 +2,9 @@ import React from 'react';
 import MenuList from './list/MenuList';
 import style from './header.module.scss';
 
-import logo from '../../../assets/images/first_page/logo.png';
-import gamburger from '../../../assets/images/first_page/icon/icon_menu.svg';
+//import logo from '../../../assets/images/first_page/logo.png';
+import logo from '@assets/images/first_page/logo.png';
+import gamburger from '@assets/images/first_page/icon/icon_menu.svg';
 
 console.log(style);
 const Navbar = () => {

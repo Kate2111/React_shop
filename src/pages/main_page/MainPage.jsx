@@ -102,7 +102,7 @@ const MainPage = () => {
         <div className="block-box__items">
           <div className="block-box__item">
             <a className="block-box__img-link" href="#" >
-              <img className="block-box__img" src="./img/block/img_1.jpg" alt="block" />
+              <img className="block-box__img" src={require("@assets/images/block/img_1.jpg")} alt="block" />
             </a>
             <div className="block-box__links">
               <span className="block-box__date">March 12, 2020 | </span>
@@ -116,7 +116,7 @@ const MainPage = () => {
 
           <div className="block-box__item">
             <a className="block-box__img-link" href="#" >
-              <img className="block-box__img" src="./img/block/img_2.jpg" alt="blobk" />
+              <img className="block-box__img" src={require("@assets/images/block/img_2.jpg")} alt="blobk" />
             </a>
             <div className="block-box__links">
               <span className="block-box__date">September 28,2020 | </span>
