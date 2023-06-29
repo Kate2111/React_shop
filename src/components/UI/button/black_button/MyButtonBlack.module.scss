@@ -1,0 +1,13 @@
+@import 'src/assets/styles/_variables';
+
+.button{ 
+    background: $title;
+    border: none;
+    border-radius: 21px;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    color: #FFFFF0;
+    margin-left: 9px;
+    cursor: pointer;
+}

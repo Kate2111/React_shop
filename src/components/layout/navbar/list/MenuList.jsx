@@ -8,7 +8,12 @@ const MenuList = ({arr}) => {
             <ul className={style.list}>
                 {
                     arr.map(item => {
-                        return <ItemLi key={item.text} href={item.href} text={item.text}/>
+                        return <ItemLi 
+                                    key={item.text} 
+                                    href={item.href} 
+                                    text={item.text}
+                                    type={item.type}
+                                />
                     }) 
                 }
             </ul>

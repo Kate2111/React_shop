@@ -1,0 +1,17 @@
+@import '@assets/styles/_variables';
+
+.input{
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba($title, .7);
+    border-radius: 21px;
+    padding: 6px 18px;
+    background-color: transparent;
+    &::placeholder{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #A1A1A1;
+    }
+}

@@ -11,7 +11,7 @@ const BlogList = () => {
         <div className={style.items}>
             {
                 blogs.map(blog => {
-                    return  <div>
+                    return  <div key={blog.name}>
                                 <a className={style.linkImg} href="#" >
                                     <img className={style.img} src={require(`@assets/images/block/${blog.name}`)} alt="block" />
                                 </a>

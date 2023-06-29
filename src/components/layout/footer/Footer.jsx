@@ -2,6 +2,8 @@ import React from 'react';
 import style from './foter.module.scss'
 import SocialList from './social/SocialList';
 import MenuList from './menu/MenuList'
+import MyInput from '../../UI/input/MyInput';
+import MyButtonBlack from '../../UI/button/black_button/MyButtonBlack';
 
 
 const Footer = () => {
@@ -17,8 +19,8 @@ const Footer = () => {
                             </p>
                             <a className={style.link} href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
                             <form className={style.form}>
-                                <input className={style.input} type="text" placeholder="Subscribe by email"/>
-                                <button className={style.button} type="submit">Send</button>
+                                <MyInput text={"Subscribe by email"}/>
+                                <MyButtonBlack type={"submit"}>Send</MyButtonBlack>
                             </form>
                         </div>
 

@@ -48,34 +48,6 @@
     display: flex;
 }
 
-.input{
-    height: 40px;
-    width: 100%;
-    border: 1px solid rgba($title, .7);
-    border-radius: 21px;
-    padding: 6px 18px;
-    background-color: transparent;
-    &::placeholder{
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
-        color: #A1A1A1;
-    }
-}
-
-.button{ 
-    background: $title;
-    border: none;
-    border-radius: 21px;
-    height: 40px;
-    width: 160px;
-    text-align: center;
-    color: #FFFFF0;
-    margin-left: 9px;
-    cursor: pointer;
-}
-
 
 .menu{
     margin-right: 60px;
