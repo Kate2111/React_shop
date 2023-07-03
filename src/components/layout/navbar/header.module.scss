@@ -1,7 +1,7 @@
 @import '@assets/styles/_variables';
 
 .inner{
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items:center
@@ -13,6 +13,21 @@
     cursor: pointer;
 }
     
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.tel{
+    color: black;
+}
 
 .rightside-menu{
     position: relative;

@@ -1,17 +1,18 @@
 import React from 'react';
 import style from './menuItem.module.scss';
+import {Link, useLocation} from 'react-router-dom';
 
-const ItemLi = ({href, text, type}) => {
+const ItemLi = ({href, text}) => {
     return (
         <li className={style.item}>
             {
-                type === 'link'
-                ?
-                <a className={style.link} href={href}>{text}</a>
-                :
-                <img src={require('@assets/images/first_page/logo.png')} alt={text}/>
+                <Link 
+                    to={href}
+                    className={style.link}
+                >
+                    {text}
+                </Link>
             }
-            
         </li>
     );
 };

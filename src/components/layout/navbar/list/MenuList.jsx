@@ -12,7 +12,6 @@ const MenuList = ({arr}) => {
                                     key={item.text} 
                                     href={item.href} 
                                     text={item.text}
-                                    type={item.type}
                                 />
                     }) 
                 }
