@@ -1,0 +1,304 @@
+ {
+  "catalog": [
+    {
+      "category": "Bedroom furniture",
+      "info": [
+        {
+          "id": "1t7c_",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "XdJdY",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "-1DhN",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "uVw69",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "e66xV",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "category": "Living room furniture",
+      "info": [
+        {
+          "id": "zkKtv",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "pcCBr",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "6ADKK",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "S3pJ3",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "Y19GZ",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "category": "Office furniture",
+      "info": [
+        {
+          "id": "24ah-",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "FaiVc",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "unktQ",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "s6Bvt",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "FWcGn",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "category": "Dining room",
+      "info": [
+        {
+          "id": "QC2UN",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "38XmP",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "_8mWC",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "GqsL6",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "TQCm2",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "category": "Chair",
+      "info": [
+        {
+          "id": "zqJc7",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "g3b1N",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "wJO_0",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "p1sjE",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        },
+        {
+          "id": "cEwCQ",
+          "title": "",
+          "subtitle": "",
+          "old_price": 38000,
+          "price": 35000,
+          "image": "",
+          "manufacturer": "",
+          "material": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

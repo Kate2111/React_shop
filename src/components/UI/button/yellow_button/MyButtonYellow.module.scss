@@ -1,0 +1,12 @@
+@import 'src/assets/styles/_variables';
+
+.button{ 
+    background: $yellow;
+    border: none;
+    border-radius: 21px;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    color: $default;
+    cursor: pointer;
+}

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import GalleryList from '../list/GalleryList';
+import CatalogList from '../list/CatalogList';
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import styleTab from '@components/UI/button/MyButtonTab.module.scss'
 import classNames from 'classnames';
-import style from './GallerySection.module.scss';
+import style from './CatalogSection.module.scss';
 
 
 const GallerySection = () => {
@@ -32,7 +32,7 @@ const GallerySection = () => {
               }
             </div>                      
 
-            <GalleryList active={active}/>
+            <CatalogList active={active}/>
           </div>
       </section>
     );

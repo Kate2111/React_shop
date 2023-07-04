@@ -11,14 +11,14 @@
     padding: 6px 16px;
     background-color: transparent;
     &:hover{
-        background: #FFEF35;
+        background: $yellow;
         transition: all .4s;
         cursor: pointer;
     }
 }
 
 .active {
-    border: 1px solid #FFEF35;
-    background: #FFEF35;
+    border: 1px solid $yellow;
+    background: $yellow;
     color: $title;
 }

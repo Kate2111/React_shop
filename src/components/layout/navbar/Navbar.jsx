@@ -1,19 +1,17 @@
 import React from 'react';
 import MenuList from './list/MenuList';
 import style from './header.module.scss';
-import MyInput from '../../UI/input/MyInput';
-import MyButtonBlack from '../../UI/button/black_button/MyButtonBlack';
 import logo from '@assets/images/first_page/logo.png';
-import heart from '@assets/images/header/heart.png';
-import buy from '@assets/images/header/buy1.png';
-import login from '@assets/images/header/login.png'
+import heart from '@assets/images/header/Heart.svg';
+import buy from '@assets/images/header/Buy.svg';
+import login from '@assets/images/header/Login.svg'
 
 
 
 const Navbar = () => {
     const navigationButtons = [
         { text: 'About', href: '/React_shop/about', type: 'link'},  
-        { text: 'Gallery', href: '/React_shop/gallery', type: 'link'},
+        { text: 'Catalog', href: '/React_shop/catalog', type: 'link'},
         { text: 'Blog', href: '/React_shop/blog', type: 'link'},
         { text: 'Contact', href: '/React_shop/contact', type: 'link'}
     ]

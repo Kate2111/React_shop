@@ -7,6 +7,9 @@ import DecorSection from '../../components/main/decor/DecorSection';
 
 
 const MainPage = () => {
+    
+
+
     return (<>
       <TopSection/>  
 
@@ -20,11 +23,5 @@ const MainPage = () => {
     </>
     );
 };
-
-{/* <div className={style.inner}>
-                    <MyButtonBlack>Catalog</MyButtonBlack>
-                    <MyInput text={'Search...'}/>
-                    
-                </div> */}
 
 export default MainPage;
