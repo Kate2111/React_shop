@@ -1,5 +1,5 @@
  {
-  "catalog": [
+  "newcollection": [
     {
       "category": "new_collection",
       "info": [
@@ -94,7 +94,9 @@
           "description": "Bring elegance and brightness to your living space with this round nesting end table set. These modern side tables feature a gold/black finished steel frame with a nesting design that allows you to easily move the smaller end table into the other. The tabletop is built of strong tempered glass, which provides you with a perfect place to display your favorite flower, a family frame, and other ornaments. Making cleaning a breeze, the steel frame is finished with powder coating for rust resistance, so you can simply wipe it clean using a clean, dry cloth. Ideal for the living room, bedroom, guestroom, office, apartment, and small space."
         }
       ]
-    },
+    }
+  ],
+  "catalog": [
     {
       "category": "Bedroom furniture",
       "info": [
@@ -163,7 +165,7 @@
           "title": "Briaroaks 3 Piece Bedroom Set",
           "old_price": 799,
           "price": 543,
-          "image": "https://console.firebase.google.com/project/myreactshop-c5f21/storage/myreactshop-c5f21.appspot.com/files/~2Fcatalog~2Fbedroom",
+          "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_8.webp?alt=media&token=2c5b30fe-c9ac-4d9b-8bb2-7181bd29db05",
           "manufacturer": "tree",
           "material": "",
           "description": "This 3-piece bedroom set creates a mid-century aesthetic that highlights clean-lines and minimalist appeal. It includes a low-profile queen bed and two nightstands that provide platforms for books, lamps, and more. Each piece is made from solid and engineered wood, while the nightstands feature flared dowel legs and two shelf-like cubbies for additional storage. The bed frame and rectangular panel headboard are wrapped in gray-hued velvet fabric with additional padding and channel tufting to complete this modern design. Support legs and slats eliminate the need for a box spring, so all that's left to get is a mattress (sold separately)."
@@ -173,7 +175,7 @@
           "title": "Solid Wood Nightstand",
           "old_price": 157,
           "price": 109,
-          "image": "https://console.firebase.google.com/project/myreactshop-c5f21/storage/myreactshop-c5f21.appspot.com/files/~2Fcatalog~2Fbedroom",
+          "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_7.webp?alt=media&token=78bdee1e-7fd6-4475-a2fe-7d3f7e16c242",
           "manufacturer": "tree",
           "material": "",
           "description": "This product is made of natural materials, which makes it unique and can lead to slight color and/or size variations. This clear-lined nightstand, made from solid wood features two drawers that let you easily tuck away and organize bedside essentials. The splayed legs bring out this design's mid-century modern side."
@@ -265,7 +267,7 @@
           "title": "Faye Ergonomic Task Chair",
           "old_price": 189,
           "price": 134,
-          "image": "https://console.firebase.google.com/project/myreactshop-c5f21/storage/myreactshop-c5f21.appspot.com/files/~2Fcatalog~2Foffice",
+          "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_1.jpg?alt=media&token=ec00a632-d550-4ac0-8f4d-c58f10832bb4",
           "manufacturer": "",
           "material": "",
           "description": "The mesh back of chair has excellent elasticity, completely suitable for the waist and back curve. It provides comfortable support which helps you to maintain a relaxed posture in a long hours of work. It is easier to disperse pressure and relieve muscle fatigue."
@@ -305,7 +307,7 @@
           "title": "Baber 19.7D 2-Drawer Writing Desk, White",
           "old_price": 129,
           "price": 115,
-          "image": "",
+          "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_6.webp?alt=media&token=38cd6fd8-d710-476a-8f26-6a1cb565bec1",
           "manufacturer": "",
           "material": "",
           "description": "This rectangular computer desk streamlines your WFH space with extra storage and a sleek look. It's made from engineered wood with a desktop surface measuring 39.4'' wide that's ideal for a computer, work light, and caffeinated beverage. The body features two soft-close drawers with cutout pulls that are great for office supplies, charging cords, and extra papers. We love the straight, flared legs that leave plenty of foot room and reference mid-century modern design. Plus, this desk has a finished back, so it looks just as good up against a wall or in the center of the room."
