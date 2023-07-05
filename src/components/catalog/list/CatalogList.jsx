@@ -14,8 +14,6 @@ const GalleryList = ({active}) => {
         { category: 'Chair', info: [{id: nanoid(5), title:'Диван "Ergonomic Rubber Shoes"', price:'35 990 ₽', image: 'img_1.jpg'}, {id: nanoid(5), title:'Диван "Ergonomic Rubber Shoes"', price:'35 990 ₽', image: 'img_2.webp'}, {id: nanoid(5), title:'Диван "Ergonomic Rubber Shoes"', price:'35 990 ₽', image: 'img_3.webp'}, {id: nanoid(5), title:'Диван "Ergonomic Rubber Shoes"', price:'35 990 ₽', image: 'img_4.webp'}, {id: nanoid(5), title:'Диван "Ergonomic Rubber Shoes"', price:'35 990 ₽', image: 'img_5.webp'}]},
       ]
 
-      console.log(catalog);
-
       const navigate = useNavigate();
 
     return (

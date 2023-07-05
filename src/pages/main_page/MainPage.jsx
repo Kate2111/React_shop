@@ -5,11 +5,7 @@ import BlogSection from '../../components/main/blog/section/BlogSection';
 import TopSection from '../../components/main/top/TopSection';
 import DecorSection from '../../components/main/decor/DecorSection';
 
-
 const MainPage = () => {
-    
-
-
     return (<>
       <TopSection/>  
 
