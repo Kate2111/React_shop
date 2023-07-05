@@ -9,6 +9,7 @@ import {CatalogeList} from './API/context'
 
 function App() {
   const [catalog, setCatalog] = useState([]);
+  const [newCollection, setNewCollection] = useState([]);
   
   useEffect(() => {
     getDataList('catalog')
@@ -16,30 +17,41 @@ function App() {
     .catch(err=>console.log(err));
   }, [])
   
-  //console.log(catalog);
-
+  useEffect(() => {
+    getDataList('newcollection')
+    .then(res=>setNewCollection(res))
+    .catch(err=>console.log(err));
+  }, [])
+  
   return (<>
-    <CatalogeList.Provider value={{catalog, setCatalog}}>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/React_shop" element={
-            <LayoutPage>
-              <MainPage/>
-            </LayoutPage>} 
-          />
-          <Route exact path="/React_shop/catalog" element={
-            <LayoutPage>
-              <CatalogPage/>
-            </LayoutPage>} 
-          />
-          <Route exact path="/React_shop/catalog/:id" element={
-            <LayoutPage>
-              <ProductPage/>
-            </LayoutPage>} 
-          />
+        
+            <Route exact path="/React_shop" element={
+              <CatalogeList.Provider value={{newCollection, setNewCollection}}>
+                <LayoutPage>
+                  <MainPage/>
+                </LayoutPage>
+              </CatalogeList.Provider>} 
+            />
+          
+            <Route exact path="/React_shop/catalog" element={
+              <CatalogeList.Provider value={{catalog, setCatalog}}>
+                <LayoutPage>
+                  <CatalogPage/>
+                </LayoutPage>
+              </CatalogeList.Provider> } 
+            />
+            <Route exact path="/React_shop/catalog/:id" element={
+              <CatalogeList.Provider value={{catalog, setCatalog}}>
+                <LayoutPage>
+                  <ProductPage/>
+                </LayoutPage>
+              </CatalogeList.Provider> } 
+            />
+          
         </Routes>
       </BrowserRouter>
-    </CatalogeList.Provider>
   </>
   );
 }
