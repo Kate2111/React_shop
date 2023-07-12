@@ -1,12 +1,6 @@
 @import '@assets/styles/_variables';
 
 
-.items{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap:30px
-}
-
 .item {
     position: relative;
     &:hover{
@@ -14,7 +8,9 @@
             opacity: 1;
         }
     }
+    overflow: hidden;
 }
+
 
 .info{
     position: absolute;

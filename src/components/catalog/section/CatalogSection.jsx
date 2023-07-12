@@ -10,6 +10,7 @@ const GallerySection = () => {
     const tabs = ['Bedroom furniture', 'Living room furniture', 'Office furniture', 'Dining room futniture', 'Chair']
 
     const [active, setActive] = useState(1);
+   
 
     return (
         <section className={style.gallery}>

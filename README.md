@@ -9,6 +9,7 @@
 - Axios
 - AliExpress API
 - Webpack
+- Swiper-slider
 
 рефакторинг кода, изначально проект был написан на чистом js, html, css
 
