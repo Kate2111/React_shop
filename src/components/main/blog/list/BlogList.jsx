@@ -12,14 +12,14 @@ const BlogList = () => {
             {
                 blogs.map(blog => {
                     return  <div key={blog.name}>
-                                <a className={style.linkImg} href="#" >
+                                <a className={style.linkImg} href="/" >
                                     <img className={style.img} src={require(`@assets/images/block/${blog.name}`)} alt="block" />
                                 </a>
 
                                 <div className={style.links}>
                                     <span className={style.date}>{blog.date}</span>
-                                    <a className={style.autor} href="#">{blog.autor}</a>
-                                    <a className={style.theme}href="#">{blog.theme}</a>
+                                    <a className={style.autor} href="/">{blog.autor}</a>
+                                    <a className={style.theme}href="/">{blog.theme}</a>
                                 </div>
 
                                 <a href="#">

@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 import {CatalogeList} from '../../../API/context';
 
 const GalleryList = ({active}) => {
-    const {catalog, setCatalog} = useContext(CatalogeList);
+    const {catalog} = useContext(CatalogeList);
 
     const navigate = useNavigate();
 

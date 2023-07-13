@@ -3,10 +3,10 @@ import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 
 
-const LayoutPage = ({children}) => {
+const LayoutPage = ({children, isMain}) => {
     return (
         <div className="wrapper">
-            <Navbar/>
+            <Navbar isMain={isMain}/>
 
             <div className="main">
                 {children}

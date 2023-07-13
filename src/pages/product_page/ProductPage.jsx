@@ -18,7 +18,7 @@ const ProductPage = () => {
     const params = useParams();
     const index = params.id;
 
-    const {catalog, setCatalog} = useContext(CatalogeList);
+    const {catalog} = useContext(CatalogeList);
 
  
     return ( <>
@@ -27,7 +27,7 @@ const ProductPage = () => {
                 catalog.map(({info}) => {
                     return info.map(({id, title, old_price, price, image, manufacturer, material, description})=> {
                         if(index === id) {
-                            return  <div className={style.wrapper} key={id}>
+                            return  (<div className={style.wrapper} key={id}>
                                         <div className={style.image}>
                                             <img     
                                                 className={style.img}
@@ -96,7 +96,7 @@ const ProductPage = () => {
                                                 <p className={style.descr}>{description}</p>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div> )
                         }
                     })
                 })

@@ -8,7 +8,7 @@ import login from '@assets/images/header/Login.svg'
 
 
 
-const Navbar = () => {
+const Navbar = ({isMain}) => {
     const navigationButtons = [
         { text: 'About', href: '/React_shop/about', type: 'link'},  
         { text: 'Catalog', href: '/React_shop/catalog', type: 'link'},
@@ -17,10 +17,10 @@ const Navbar = () => {
     ]
 
     return (<>
-        <header>
+        <header className={isMain && style.main}>
             <div className="container">
                 <div className={style.inner}>
-                    <a className="logo" href="./about.html"> <img src={logo} alt="logo"/></a>
+                    {/* <a className="logo" href="./about.html"> <img src={logo} alt="logo"/></a> */}
                     <MenuList arr={navigationButtons}/>
                     <div className={style.icons}>
                         <a className={style.tel} href="tel:+389956759830">+38995-675-98-30</a>

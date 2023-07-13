@@ -2,6 +2,10 @@ $title: #363838;
 $yellow: #FFEF35;
 $default: #5A5A5A;
 
+:root{
+    --index: calc(1vw + 1vh);
+}
+
 %title-menu {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;

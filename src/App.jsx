@@ -22,6 +22,8 @@ function App() {
     .then(res=>setNewCollection(res))
     .catch(err=>console.log(err));
   }, [])
+
+  const [isMain] = useState(true);
   
   return (<>
       <BrowserRouter>
@@ -29,7 +31,7 @@ function App() {
         
             <Route exact path="/React_shop" element={
               <CatalogeList.Provider value={{newCollection, setNewCollection}}>
-                <LayoutPage>
+                <LayoutPage isMain={isMain}>
                   <MainPage/>
                 </LayoutPage>
               </CatalogeList.Provider>} 

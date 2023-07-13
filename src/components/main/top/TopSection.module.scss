@@ -1,12 +1,12 @@
 @import 'src/assets/styles/_variables';
 
-.logo{
+/* .logo{
     margin: 0 auto;
 }
 
 .top{
     position: relative;
-    height: 900px;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -45,5 +45,80 @@
 
 .active{
         background-color: #FFEF35;
+} */
+
+
+
+.layers{
+    color:white;
+    perspective: 1000px;
+    overflow: hidden;
 }
 
+.container{
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+}
+
+.item{
+    position: absolute;
+    inset: -3vw;
+    background-size: cover;
+    background-position: center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.logo{
+    width: calc(var(--index) * 7.8);
+    height: calc(var(--index) * 7.8);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 15%;
+}
+
+.title{
+    font-weight: 700;
+    font-size: calc(var(--index) * 4);
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+}
+
+/* .subtitle{
+    font-size: calc(var(--index) * 2);
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+} */
+
+
+.layer_1{
+    background-image: url(../../../assets/images/first_page/background/layer1.jpg);
+    transform: translateZ(-65px) scale(1.06);
+}
+
+.layer_2{
+    transform: translateZ(110px);
+}
+
+.layer_3{
+    background-image: url(../../../assets/images/first_page/background/layer3.png);
+    transform: translateZ(-25px) scale(1);
+}
+.layer_4{
+    background-image: url(../../../assets/images/first_page/background/layer4.png);
+    transform: translateZ(30px) scale(0.9);
+}
+.layer_5{
+    background-image: url(../../../assets/images/first_page/background/layer5.png);
+    transform: translateZ(90px) scale(0.9);
+}
