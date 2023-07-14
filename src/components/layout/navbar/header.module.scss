@@ -36,6 +36,11 @@
     color: black;
 }
 
+.tel_white {
+    color: white;
+    text-shadow: 1px 0px 0 #0000007a, -1px -1px 0 #0000008f, -1px 1px 0 #00000091, 1px 1px 0 #00000091;
+}
+
 .rightside-menu{
     position: relative;
     display: none;

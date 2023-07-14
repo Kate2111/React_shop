@@ -4,6 +4,7 @@ $default: #5A5A5A;
 
 :root{
     --index: calc(1vw + 1vh);
+    --transiton: 1.5s cubic-bizier(.05, .5, 0, 1)
 }
 
 %title-menu {

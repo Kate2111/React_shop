@@ -1,9 +1,9 @@
 import React from 'react';
 import MenuList from './list/MenuList';
 import style from './header.module.scss';
-import logo from '@assets/images/first_page/logo.png';
 import heart from '@assets/images/header/Heart.svg';
 import buy from '@assets/images/header/Buy.svg';
+import buy_white from '@assets/images/header/BuyWhite.svg';
 import login from '@assets/images/header/Login.svg'
 
 
@@ -20,10 +20,9 @@ const Navbar = ({isMain}) => {
         <header className={isMain && style.main}>
             <div className="container">
                 <div className={style.inner}>
-                    {/* <a className="logo" href="./about.html"> <img src={logo} alt="logo"/></a> */}
-                    <MenuList arr={navigationButtons}/>
+                    <MenuList arr={navigationButtons} isMain={isMain}/>
                     <div className={style.icons}>
-                        <a className={style.tel} href="tel:+389956759830">+38995-675-98-30</a>
+                        <a className={isMain ? style.tel_white : style.tel} href="tel:+389956759830">+38995-675-98-30</a>
                         <a href="./about.html"><img className={style.icon} src={heart} alt='heart'/></a>
                         <a href="./about.html"><img className={style.icon} src={buy} alt="buy"/></a>
                         <a href="./about.html"><img className={style.icon} src={login} alt="login" /></a>

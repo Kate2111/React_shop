@@ -3,9 +3,8 @@
 
 .item {
     display: none;
-    max-height: 1148px;
-    grid-template-columns: 1fr repeat(2, 450px);
-    grid-template-rows: repeat(2, 425px);
+    grid-template-columns: [col1-start] 33.33% [col2-start] 33.33% [col3-start] 33.33% [col3-end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
     grid-gap: 34px;
 }
 

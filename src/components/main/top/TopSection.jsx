@@ -8,8 +8,8 @@ const TopSection = () => {
 	const create3DElem = (event) => {
 		Object.assign(document.documentElement, {
 			style: `
-				--move-x: ${(event.clientX - window.innerWidth / 2) * -0.05}deg;
-				--move-y: ${(event.clientY - window.innerHeight / 2) * -0.1}deg
+				--move-x: ${(event.clientX - window.innerWidth / 2) * -0.005}deg;
+				--move-y: ${(event.clientY - window.innerHeight / 2) * -0.01}deg
 			`
 		})
 	}

@@ -10,7 +10,16 @@
     color: rgba(54, 56, 56, 0.9033);
     line-height: 22px;
 }
-.link:hover{
+
+.linkmain{
+    line-height: 22px;
+    @extend %title-menu;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 0px 0 #0000007a, -1px -1px 0 #0000008f, -1px 1px 0 #00000091, 1px 1px 0 #00000091;
+}
+
+.link:hover, .linkmain:hover{
     mix-blend-mode: normal;
     opacity: 0.7;
     border-radius: 1px;
