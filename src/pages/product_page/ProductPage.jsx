@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
 import star from '@assets/images/product_page/Star.svg';
 import heart from '@assets/images/product_page/Heart.svg';
@@ -11,20 +11,46 @@ import tinkoff from '@assets/images/product_page/tinkoff.svg';
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import MyButtonYellow from '@components/UI/button/yellow_button/MyButtonYellow';
 import classNames from 'classnames';
-import {CatalogeList} from '@API/context';
+import {CatalogeList, NewCollection, FavoritLisr, CartList} from '@API/context';
 
 
 const ProductPage = () => {
     const params = useParams();
+    const location = useLocation();
     const index = params.id;
 
     const {catalog} = useContext(CatalogeList);
+    const {newCollection} = useContext(NewCollection);
+    const {favorite, setFavorite} = useContext(FavoritLisr);
+    const {cart, setCart} = useContext(CartList);
 
+    const source = location.state && location.state.source;
+    const data = source === 'newcollection' ? newCollection : catalog;
+
+    const addToCart = () => {
+        data.forEach(({info}) => {
+            info.forEach((elem)=>{
+                if(elem.id === params.id) {
+                    setCart([...cart, elem]);
+                }
+            })
+        }); 
+    }
+
+    const addToFavorite = () => {
+        data.forEach(({ info }) => {
+            info.forEach((elem) => {
+                if (elem.id === params.id) {
+                    setFavorite([...favorite, elem]);
+                }
+            });
+         });
+    }
  
     return ( <>
         <div className='container'>
             {
-                catalog.map(({info}) => {
+                data.map(({info}) => {
                     return info.map(({id, title, old_price, price, image, manufacturer, material, description})=> {
                         if(index === id) {
                             return  (<div className={style.wrapper} key={id}>
@@ -67,16 +93,16 @@ const ProductPage = () => {
                                                 </div>
                                                 <div className={classNames(style.inner_column, style.column_gap)}>
                                                     <div className={style.buy_buttons}>
-                                                        <MyButtonYellow>Add to Cart</MyButtonYellow>
-                                                        <MyButtonTab><img src={heart} alt="heart" /></MyButtonTab>
+                                                        <MyButtonYellow onClick={addToCart}>Add to Cart</MyButtonYellow>
+                                                        <MyButtonTab onClick={addToFavorite}><div className={style.heart}></div></MyButtonTab>
                                                     </div>
                                                     <MyButtonTab>Buy in credit</MyButtonTab>
                                                     <div className={style.icons}>
-                                                        <img src={tinkoff} alt="tinkoff"/>
-                                                        <img src={sbp} alt="sbp"/>
-                                                        <img src={gazprombank} alt="gazprombank"/>
-                                                        <img src={raiffeisen} alt="raiffeisen"/>
-                                                        <img src={citibank} alt="citibank"/>
+                                                        <img className={style.icon} src={tinkoff} alt="tinkoff"/>
+                                                        <img className={style.icon} src={sbp} alt="sbp"/>
+                                                        <img className={style.icon} src={gazprombank} alt="gazprombank"/>
+                                                        <img className={style.icon} src={raiffeisen} alt="raiffeisen"/>
+                                                        <img className={style.icon} src={citibank} alt="citibank"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -84,10 +110,12 @@ const ProductPage = () => {
                                                 <h2 className={style.subtitle}>Size and Features</h2>
                                                 <div className={style.inner}>
                                                     <p className={style.text}>Housing material</p>
+                                                    <div className={style.dots}></div>
                                                     <p className={style.id_product}>{material}</p>
                                                 </div>
                                                 <div className={style.inner}>
                                                     <p className={style.text}>Manufacturer</p>
+                                                    <div className={style.dots}></div>
                                                     <p className={style.id_product}>{manufacturer}</p>
                                                 </div>
                                             </div>

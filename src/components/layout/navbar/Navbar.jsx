@@ -4,8 +4,7 @@ import style from './header.module.scss';
 import heart from '@assets/images/header/Heart.svg';
 import buy from '@assets/images/header/Buy.svg';
 import buy_white from '@assets/images/header/BuyWhite.svg';
-import login from '@assets/images/header/Login.svg'
-
+import login from '@assets/images/header/Login.svg';
 
 
 const Navbar = ({isMain}) => {

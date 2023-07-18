@@ -19,7 +19,7 @@ const GalleryList = ({active}) => {
                                 {
                                     info.map((elem) => {
                                         return <div className={style.wrapper} key={elem.id}>
-                                                    <a onClick={() => navigate(`/React_shop/catalog/${elem.id}`)} target='_blank'>
+                                                    <a onClick={() => navigate(`/React_shop/catalog/${elem.id}`,  { state: { source: 'catalog' } })} target='_blank'>
                                                         <img
                                                             className={style.img}
                                                             src={elem.image}
@@ -36,7 +36,7 @@ const GalleryList = ({active}) => {
                                                             </div>
                                                         </div>     
                                                     </div>
-                                            </div> 
+                                                </div> 
                                     })
                                 }
                             </div>)

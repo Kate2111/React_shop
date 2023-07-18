@@ -26,3 +26,5 @@ export const getDataList = async (recourse) => {
     console.error(err);
   }
 }
+
+

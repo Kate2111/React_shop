@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
 import style from './Collection.module.scss';
-import {CatalogeList} from '@API/context';
+import {NewCollection} from '@API/context';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Mousewheel, Autoplay} from 'swiper/modules'
 import 'swiper/css';
@@ -12,8 +12,9 @@ import 'swiper/css/autoplay';
 
 
 const CollectionList = () => {
-    const {newCollection} = useContext(CatalogeList);
+    const {newCollection} = useContext(NewCollection);
     const navigate = useNavigate();
+
 
     return (
         <Swiper
@@ -35,7 +36,7 @@ const CollectionList = () => {
              {
                 newCollection.map(({info}) => {
                     return info.map(({id, title, price, image}) => {
-                        return <SwiperSlide className={style.item} onClick={() => navigate(`/React_shop/catalog/${id}`)}>
+                        return <SwiperSlide className={style.item} onClick={() => navigate(`/React_shop/catalog/${id}`, { state: { source: 'newcollection' } })}>
                                     <img src={image} alt={title}/>
                                     <div className={style.info}>
                                         <h6 className={style.title}>{title}</h6>

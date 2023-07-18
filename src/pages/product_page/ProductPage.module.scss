@@ -61,6 +61,14 @@
     letter-spacing: 0em;
 }
 
+.dots{
+    position: relative;
+    top: -4px;
+    border-bottom: 1px black dashed;
+    flex: 1;
+    margin: 0 10px;
+}
+
 .descr{
     font-size: 14px;
     font-weight: 400;
@@ -110,9 +118,20 @@
     justify-content: space-between;
 }
 
+.heart{
+    background-image: url(../../assets/images/product_page/Heart.svg);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 17px;
+}
+
 .icons{
     display: flex;
     gap: 20px;
+}
+
+.icon{
+    cursor: pointer;
 }
 
 .active{

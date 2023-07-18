@@ -5,11 +5,13 @@ import CatalogPage from './pages/catalog_page/CatalogPage';
 import ProductPage from './pages/product_page/ProductPage';
 import { useEffect, useState } from 'react';
 import {getDataList} from './API/firebase';
-import {CatalogeList} from './API/context'
+import {NewCollection, CatalogeList, FavoritLisr, CartList} from './API/context';
 
 function App() {
-  const [catalog, setCatalog] = useState([]);
   const [newCollection, setNewCollection] = useState([]);
+  const [catalog, setCatalog] = useState([]);
+  const [favorite, setFavorite] = useState([]);
+  const [cart, setCart] = useState([]);
   
   useEffect(() => {
     getDataList('catalog')
@@ -30,26 +32,39 @@ function App() {
         <Routes>
         
             <Route exact path="/React_shop" element={
-              <CatalogeList.Provider value={{newCollection, setNewCollection}}>
-                <LayoutPage isMain={isMain}>
-                  <MainPage/>
-                </LayoutPage>
-              </CatalogeList.Provider>} 
-            />
+                <NewCollection.Provider value={{newCollection, setNewCollection}}>
+                      <LayoutPage isMain={isMain}>
+                        <MainPage/>
+                      </LayoutPage>
+                </NewCollection.Provider>
+          
+            }/>
           
             <Route exact path="/React_shop/catalog" element={
-              <CatalogeList.Provider value={{catalog, setCatalog}}>
-                <LayoutPage>
-                  <CatalogPage/>
-                </LayoutPage>
-              </CatalogeList.Provider> } 
-            />
+                <CatalogeList.Provider value={{catalog, setCatalog}}>
+                  <FavoritLisr.Provider value={{favorite, setFavorite}}>
+                    <CartList.Provider value={{cart, setCart}}>
+                      <LayoutPage>
+                        <CatalogPage/>
+                      </LayoutPage>
+                    </CartList.Provider>
+                  </FavoritLisr.Provider>
+                </CatalogeList.Provider>	
+            } />
+
             <Route exact path="/React_shop/catalog/:id" element={
-              <CatalogeList.Provider value={{catalog, setCatalog}}>
-                <LayoutPage>
-                  <ProductPage/>
-                </LayoutPage>
-              </CatalogeList.Provider> } 
+              <NewCollection.Provider value={{newCollection, setNewCollection}}>
+                <CatalogeList.Provider value={{catalog, setCatalog}}>
+                  <FavoritLisr.Provider value={{favorite, setFavorite}}>
+                    <CartList.Provider value={{cart, setCart}}>
+                      <LayoutPage>
+                        <ProductPage/>
+                      </LayoutPage>
+                    </CartList.Provider>
+                  </FavoritLisr.Provider>
+                </CatalogeList.Provider>
+              </NewCollection.Provider>
+            } 
             />
           
         </Routes>

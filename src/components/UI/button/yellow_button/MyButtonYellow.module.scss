@@ -9,4 +9,11 @@
     text-align: center;
     color: $default;
     cursor: pointer;
+    
+}
+
+.button:hover{
+    background-color: transparent;
+    color: $default;
+    border: 1px solid  $default;
 }
