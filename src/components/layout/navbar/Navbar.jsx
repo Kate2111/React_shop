@@ -5,6 +5,7 @@ import heart from '@assets/images/header/Heart.svg';
 import buy from '@assets/images/header/Buy.svg';
 import buy_white from '@assets/images/header/BuyWhite.svg';
 import login from '@assets/images/header/Login.svg';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = ({isMain}) => {
@@ -22,9 +23,9 @@ const Navbar = ({isMain}) => {
                     <MenuList arr={navigationButtons} isMain={isMain}/>
                     <div className={style.icons}>
                         <a className={isMain ? style.tel_white : style.tel} href="tel:+389956759830">+38995-675-98-30</a>
-                        <a href="./about.html"><img className={style.icon} src={heart} alt='heart'/></a>
-                        <a href="./about.html"><img className={style.icon} src={buy} alt="buy"/></a>
-                        <a href="./about.html"><img className={style.icon} src={login} alt="login" /></a>
+                        <Link to='/React_shop/favorite'><img className={style.icon} src={heart} alt='heart'/></Link>
+                        <Link to='/React_shop/cart'><img className={style.icon} src={buy} alt="buy"/></Link>
+                        <Link to="/React_shop/login"><img className={style.icon} src={login} alt="login" /></Link>
                     </div>
                 </div>
             </div>

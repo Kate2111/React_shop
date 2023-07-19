@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
 import star from '@assets/images/product_page/Star.svg';
-import heart from '@assets/images/product_page/Heart.svg';
+//import heart from '@assets/images/product_page/Heart.svg';
 import citibank from '@assets/images/product_page/citibank.svg';
 import gazprombank from '@assets/images/product_page/gazprombank.svg';
 import raiffeisen from '@assets/images/product_page/raiffeisen.svg';
@@ -11,7 +11,8 @@ import tinkoff from '@assets/images/product_page/tinkoff.svg';
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import MyButtonYellow from '@components/UI/button/yellow_button/MyButtonYellow';
 import classNames from 'classnames';
-import {CatalogeList, NewCollection, FavoritLisr, CartList} from '@API/context';
+import {CatalogeList, NewCollection} from '@API/context';
+import { postDataList } from '../../API/firebase';
 
 
 const ProductPage = () => {
@@ -21,8 +22,7 @@ const ProductPage = () => {
 
     const {catalog} = useContext(CatalogeList);
     const {newCollection} = useContext(NewCollection);
-    const {favorite, setFavorite} = useContext(FavoritLisr);
-    const {cart, setCart} = useContext(CartList);
+
 
     const source = location.state && location.state.source;
     const data = source === 'newcollection' ? newCollection : catalog;
@@ -31,7 +31,7 @@ const ProductPage = () => {
         data.forEach(({info}) => {
             info.forEach((elem)=>{
                 if(elem.id === params.id) {
-                    setCart([...cart, elem]);
+                    postDataList('cart', elem, elem.id);
                 }
             })
         }); 
@@ -41,7 +41,7 @@ const ProductPage = () => {
         data.forEach(({ info }) => {
             info.forEach((elem) => {
                 if (elem.id === params.id) {
-                    setFavorite([...favorite, elem]);
+                    postDataList('favorite', elem, elem.id)
                 }
             });
          });

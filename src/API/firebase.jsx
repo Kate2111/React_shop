@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app';
-import {getDatabase, get, ref} from 'firebase/database';
+import {getDatabase, get, set, ref} from 'firebase/database';
 
 
 const firebaseConfig = {
@@ -26,5 +26,17 @@ export const getDataList = async (recourse) => {
     console.error(err);
   }
 }
+
+export const postDataList = async (recourse, elem, id) => {
+  const recourseRef = ref(db,`${recourse}/${id}`);
+
+  try{
+    set(recourseRef, elem);
+    console.log('good')
+  } catch(err) {
+    console.error(err);
+  }
+}
+
 
 

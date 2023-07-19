@@ -1,0 +1,13 @@
+@import 'src/assets/styles/_variables';
+
+.button{ 
+    gap: 15px;
+    background: transparent;
+    text-align: center;
+    color: #72BF44;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: none;
+}

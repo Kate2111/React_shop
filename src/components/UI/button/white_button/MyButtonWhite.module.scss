@@ -1,0 +1,19 @@
+@import 'src/assets/styles/_variables';
+
+.button{ 
+    background-color: transparent;
+    border: solid 1px $gray;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color:#c3c1c17e;
+}
+
+.button:active{
+    background-color: #c3c1c1;
+}
