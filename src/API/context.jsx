@@ -3,7 +3,7 @@ import { createContext} from "react";
 
 export const NewCollection = createContext(null);
 export const CatalogeList = createContext(null);
-export const FavoritLisr = createContext(null);
+export const FavoritList = createContext(null);
 export const CartList = createContext(null);
 
 

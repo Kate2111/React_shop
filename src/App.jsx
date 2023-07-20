@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import {getDataList} from './API/firebase';
-import {NewCollection, CatalogeList, FavoritLisr, CartList} from './API/context';
+import {NewCollection, CatalogeList, FavoritList, CartList} from './API/context';
 import LayoutPage from '@components/layout/LayoutPage';
 import MainPage from './pages/main_page/MainPage';
 import CatalogPage from './pages/catalog_page/CatalogPage';
@@ -17,7 +17,7 @@ function App() {
   const [newCollection, setNewCollection] = useState([]);
   const [catalog, setCatalog] = useState([]);
   const [favorite, setFavorite] = useState([]);
-  const [cart, setCart] = useState();
+  const [cart, setCart] = useState([]);
   
   useEffect(() => {
     getDataList('catalog')
@@ -36,6 +36,7 @@ function App() {
     getDataList('cart')
     .then(res=>Object.values(res))
     .then(res=>setCart(res))
+    .then(console.log(cart))
     .catch(arr=>console.log(arr))
   }, [])
 
@@ -43,6 +44,7 @@ function App() {
     getDataList('favorite')
     .then(res=>Object.values(res))
     .then(res=>setFavorite(res))
+    .then(console.log(favorite))
     .catch(arr=>console.log(arr))
   }, [])
 
@@ -62,26 +64,26 @@ function App() {
           
             <Route exact path="/React_shop/catalog" element={
               <CatalogeList.Provider value={{catalog, setCatalog}}>
-                <FavoritLisr.Provider value={{favorite, setFavorite}}>
+                <FavoritList.Provider value={{favorite, setFavorite}}>
                   <CartList.Provider value={{cart, setCart}}>
                     <LayoutPage>
                       <CatalogPage/>
                     </LayoutPage>
                   </CartList.Provider>
-                </FavoritLisr.Provider>
+                </FavoritList.Provider>
               </CatalogeList.Provider>}
             />
 
             <Route exact path="/React_shop/catalog/:id" element={
               <NewCollection.Provider value={{newCollection, setNewCollection}}>
                 <CatalogeList.Provider value={{catalog, setCatalog}}>
-                  <FavoritLisr.Provider value={{favorite, setFavorite}}>
+                  <FavoritList.Provider value={{favorite, setFavorite}}>
                     <CartList.Provider value={{cart, setCart}}>
                       <LayoutPage>
                         <ProductPage/>
                       </LayoutPage>
                     </CartList.Provider>
-                  </FavoritLisr.Provider>
+                  </FavoritList.Provider>
                 </CatalogeList.Provider>
               </NewCollection.Provider>} 
             />
@@ -100,17 +102,17 @@ function App() {
             <Route exact path="/React_shop/cart" element={
               <CartList.Provider value={{cart, setCart}}>
                 <LayoutPage>
-                  <CartPage/>
+                  <CartPage category='cart'/>
                 </LayoutPage>
               </CartList.Provider>}
             />
 
             <Route exact path="/React_shop/favorite" element={
-              <FavoritLisr.Provider value={{favorite, setFavorite}}>
+              <FavoritList.Provider value={{favorite, setFavorite}}>
                 <LayoutPage>
-                  <FavoritePage/>
+                  <FavoritePage  category='favorite'/>
                 </LayoutPage>
-              </FavoritLisr.Provider>}
+              </FavoritList.Provider>}
             />
 
         </Routes>

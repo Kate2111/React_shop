@@ -22,6 +22,7 @@
 }
 
 .product{
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,18 +54,18 @@
 }
 
 .gray{
-    color: #BDBDBD;
+    color: $greyCart;
     font-size: calc(var(--index) * 0.8);
 }
 
 .newPrice{
-    font-size: calc(var(--index) * 1.1);
+    font-size: calc(var(--index) * 1);
 }
 
 .oldPrice{
-    color: #BDBDBD;
+    color: $greyCart;
     text-decoration: line-through;
-    font-size: calc(var(--index) * 1);
+    font-size: calc(var(--index) * 0.8);
 }
 
 .grayButton {
@@ -73,15 +74,22 @@
     gap: 15px;
 }
 
-img{
+.image{
     cursor: pointer; 
-    //transition: all var(--transiton);
 }
 
-img path:hover{
-    fill: #c3c1c17e;
+.imageActive{
+    fill: $yellow;
+    path{
+        stroke: $yellow; 
+    }
 }
 
-img path:active{
-    fill: #c3c1c1;
+.image:hover path{
+    stroke: $yellow;
+}
+
+.image:active path{
+    stroke: $yellow; 
+    fill: $yellow; 
 }

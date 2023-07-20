@@ -11,6 +11,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_1.png?alt=media&token=e4ffcd28-7e2f-4377-b564-0419fd8f54b1",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This loveseat tufted back and elegant design, charming loveseat adds a cozy touch to any space."
         },
         {
@@ -21,6 +22,7 @@
           "image": "",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "With its rolled arms and long rectangular cushions, this Traditional French country-inspired skirted loveseat is a perfect addition to brighten any living room. Featuring foam and coil cushions that are stylish, comfortable, and relaxing. Plus, since it's perfectly sized and easy to assemble and disassemble, moving it from room to room or house to house is a breeze. Assembly required."
         },
         {
@@ -31,6 +33,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_3.png?alt=media&token=f90f6fc6-d873-4423-8946-b14cf09d7bc4",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Anchor your living room or den in glam style with this velvet armchair! It's made from solid larch wood and engineered wood, and it's built on slender, gold-polished metal legs for a luxe look. This armchair features flared arms and a wide back, all upholstered in luxurious velvet in your choice of color. It's also filled with foam to give you the right amount of support during happy hour, or while you watch your favorite movie. Plus, when it comes time to clean this chair, all you need is a simple spot treatment."
         },
         {
@@ -41,6 +44,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_4.png?alt=media&token=2fd7df42-a08c-4a9d-9f37-225fd37c7055",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Ribbed textural rings give the Hannela vase a wonderful artisanal quality. An antiqued brown finish catches the eye, drawing attention to this elegantly earthy centerpiece."
         },
         {
@@ -61,6 +65,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_6.webp?alt=media&token=126a6f55-b967-47c6-9648-3e221eea21ea",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Looking for a stylish and functional lighting solution that will add a touch of elegance to your home or office? Look no further than our arched floor lamp! With its sleek and modern design, sturdy base, and high-quality metal construction, this lamp is built to last and is sure to impress. Its arched curve provides versatile lighting options, allowing you to direct light exactly where you need it. Whether you need task lighting for work or reading, or ambient lighting to create a warm and inviting atmosphere, this gold floor lamp has you covered. So why settle for a boring and uninspired lamp when you can have our arched floor lamp? It's the perfect blend of style and functionality and is sure to be a conversation starter. Order yours today and experience the perfect combination of form and function."
         },
         {
@@ -71,6 +76,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_7.webp?alt=media&token=9974a697-0d9e-4c24-a0f1-686a73bcb4ef",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Solid color cushion cover for bedroom, living room, kitchen, sofa, couch, and garden. Each package contains 2 cushion covers. Quality workmanship with sturdy hems and stitches, these cushion covers will fit perfectly your cushions and pillows. This cushion cover protects your pillows from dust allowing you to keep them clean and safe for long-term usage."
         },
         {
@@ -81,6 +87,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_8.webp?alt=media&token=8e931a76-ff62-41b8-be11-29ce3356ca04",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Designed of warm tones and louvered style, this accent cabinet can be used in the bedroom or as a console table in living room. The louvered doors and distressed vintage metal handle combine modern chic elements with a vintage look, making this cabinet with storage perfectly compatible with many style of home decor and adding a touch of classy charm to your home."
         },
         {
@@ -91,6 +98,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/newcollection%2Fimg_9.webp?alt=media&token=3d995c01-d9b6-4f6f-8d57-7e6d726e49aa",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Bring elegance and brightness to your living space with this round nesting end table set. These modern side tables feature a gold/black finished steel frame with a nesting design that allows you to easily move the smaller end table into the other. The tabletop is built of strong tempered glass, which provides you with a perfect place to display your favorite flower, a family frame, and other ornaments. Making cleaning a breeze, the steel frame is finished with powder coating for rust resistance, so you can simply wipe it clean using a clean, dry cloth. Ideal for the living room, bedroom, guestroom, office, apartment, and small space."
         }
       ]
@@ -108,6 +116,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_1.jpg?alt=media&token=51bf0d8b-1a61-496f-9c98-0c4ebc6a22d5",
           "manufacturer": "",
           "material": "tree",
+          "favorite": false,
           "description": "Kyle's wardrobe is where traditional design meets modern needs. Its clever design allows you to customize by adding large or small shelves (Item# W005857491 and W007088569), also by installing the internal 2-drawer unit (Item# W008956788), for storing the items not suitable for shelving. Made of 100% pine wood and available in three popular finishes it’s a great configurable solution for any place in need of more storage. Also available with mirrored doors"
         },
         {
@@ -118,6 +127,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_2.jpg?alt=media&token=bdc53718-8a4e-4bdc-a51d-ea43afca265d",
           "manufacturer": "",
           "material": "tree",
+          "favorite": false,
           "description": "This nightstand brings classic style and convenient storage to your bedside. It's made from solid wood with an off-white finish, and it has a horizontal rectangular silhouette. Tuck away everyday essentials in its two ball-bearing glide drawers, complete with beveled edges and picture-frame paneling for a traditional look. Then, stack magazines and your latest read on its exposed, slatted lower shelf. This nightstand measures 26'' high and 17'' deep, doubling seamlessly as a living room end table."
         },
         {
@@ -128,6 +138,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_3.jpg?alt=media&token=0274452a-9568-4c45-b1f5-87dabd64607c",
           "manufacturer": "",
           "material": "tree",
+          "favorite": false,
           "description": "This bedroom set has pared-down silhouettes and visible wood grain for a coastal farmhouse look. It includes two nightstands, a platform bed, and a 7-drawer double dresser with a mirror made from solid wood with a distressed natural wood finish. The panel headboard has a diagonal wood grain pattern for a mid-century flair. This set's dresser and mirror have soft-close drawers where you can keep your shirts and sweaters, and then give your outfit a look over before heading out for the day. The nightstand has a single drawer and an open cubby to keep your bedtime essentials organized. Plus, a power strip charges your devices as you sleep."
         },
         {
@@ -138,6 +149,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_4.jpg?alt=media&token=f7f0fd23-88dc-4103-bde7-bfdefa7f1cdd",
           "manufacturer": "",
           "material": "tree",
+          "favorite": false,
           "description": "Frame platform bed with wingback headboard. The steel frame construction with a tough steel bed frame and a series of evenly spaced solid wood planks to firmly support your mattress. Cylindrical corners and center support legs provide dense and strong support for up to 850 lbs of weight. The bed frame's rubber non-slip pads protect your floor from scuffing, prevent slippage and eliminate frictional noise. The metal frame and solid wood strips are held in place by acoustic hook & loop fastener and silent strips that are less likely to move. It can provide a comfortable sleep for you and your family. With 7.5 inches of space under the bed, it's easy to clean up dust under the bed."
         },
         {
@@ -148,6 +160,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_5.jpg?alt=media&token=f4305da4-75db-4abf-8039-8f43c5241a78",
           "manufacturer": "tree",
           "material": "",
+          "favorite": false,
           "description": "This 24' wide mid-century modern vanity, mirror, and matching stool offer a dedicated place to shave or do your makeup without taking up too much valuable floor space. It's made from solid and engineered wood and sits on tapered, splayed legs in a natural finish. The single soft-close drawer matches the finish on the feet, while the body features a contrasting finish designed to draw the eye. A lighted oval mirror finishes off the look with a sleek touch that contrasts the straight lines of the vanity, while the included stool is topped with linen upholstery and filled with eco-fill for added support."
         },
         {
@@ -158,6 +171,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_10.webp?alt=media&token=d66eceb2-696c-4c57-bdee-9dd7889d3982",
           "manufacturer": "tree",
           "material": "",
+          "favorite": false,
           "description": "The bed frame is made of a high-grade steel structure and wood headboard. The headboard is made of artificial wood and provides a unique natural wood grain pattern balanced perfectly with a unique black metallic lacquered frame, suitable for any home decoration. Plus, it features the outstanding mattress support of closely spaced steel slats that help extend the life of the mattress without needing a box spring."
         },
         {
@@ -168,6 +182,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_8.webp?alt=media&token=2c5b30fe-c9ac-4d9b-8bb2-7181bd29db05",
           "manufacturer": "tree",
           "material": "",
+          "favorite": false,
           "description": "This 3-piece bedroom set creates a mid-century aesthetic that highlights clean-lines and minimalist appeal. It includes a low-profile queen bed and two nightstands that provide platforms for books, lamps, and more. Each piece is made from solid and engineered wood, while the nightstands feature flared dowel legs and two shelf-like cubbies for additional storage. The bed frame and rectangular panel headboard are wrapped in gray-hued velvet fabric with additional padding and channel tufting to complete this modern design. Support legs and slats eliminate the need for a box spring, so all that's left to get is a mattress (sold separately)."
         },
         {
@@ -178,6 +193,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_7.webp?alt=media&token=78bdee1e-7fd6-4475-a2fe-7d3f7e16c242",
           "manufacturer": "tree",
           "material": "",
+          "favorite": false,
           "description": "This product is made of natural materials, which makes it unique and can lead to slight color and/or size variations. This clear-lined nightstand, made from solid wood features two drawers that let you easily tuck away and organize bedside essentials. The splayed legs bring out this design's mid-century modern side."
         },
         {
@@ -188,6 +204,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fbedroom%2Fimg_6.jpg?alt=media&token=f283e1f5-c4ad-498c-9dad-3741977a21ba",
           "manufacturer": "tree",
           "material": "",
+          "favorite": false,
           "description": "Bring the originality of mother nature to your home with this eye-catching end table. Crafted from reclaimed teak branches with a cross-cut slab across the top, each piece is entirely unique. This whimsical design brings organic charm to anywhere it is placed. Overflowing with natural beauty, it makes the perfect perch for books of art and vases filled with flowers. Variations due to natural materials and processes mean each piece is as unique as your style. Pair with colorful throw pillows and a comfy couch for a living room ready and waiting to entertain friends and family"
         }
       ]
@@ -203,6 +220,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fliving%2Fimg_1.jpg?alt=media&token=48630de6-083a-4b14-846b-d8f0657d468f",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "The contemporary styling of this armchair makes it a real statement piece in your living space. It has a frame made from engineered wood and stands on slender flared legs in a glam gold hue. Sinuous spring construction is integrated for support and helps to prevent sagging over time. Foam and sumptuous velvet (available in an array of jewel tones) cover a seat, high-rounded arms, and a tufted back with its modified wingback design. To clean, simply spot clean with a solvent-based cleaner. Partial assembly is required, but the good news is all tools are included."
         },
         {
@@ -213,6 +231,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fliving%2Fimg_2.webp?alt=media&token=33a07709-0bd4-41ba-b90b-dbcc154852b9",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This loveseat is transported in 1 package, so you can get it and use it faster. This loveseat is made of velvet fabric and foam cushion, which is very environmentally friendly, soft, and smooth. Whether you are stretching your muscles after a busy day of work, enjoying a good time, or discussing with friends, this 2-seater loveseat allows you to enjoy a sweet love time with your family at home. The main machine is a wooden structure, which is sturdy and durable, with strong support. The assembly is very simple, you only need to connect the legs and easily insert the backrest and armrest! Maintenance is as simple as that, just wipe it clean with a dry cloth! If you like it, hurry up and buy it!Take out the loveseat base and turn it upside down. Unzip the lining and you will find: legs, an assembly kit, cushions/pillows, and arms!"
         },
         {
@@ -224,6 +243,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fliving%2Fimg_3.jpg?alt=media&token=542f28c7-f7e8-4312-be08-7bb744f3407e",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This Chesterfield sofa set includes a three-seater sofa and a loveseat, featuring a traditional design with modern elements for easy furniture matching. It offers inviting comfort. Built with a sturdy solid wood frame and high-resilience sponge cushioning, it provides reliable support and durability. The deep seating space accommodates extra guests, and the three-seat sofa can also be used as a daybed. It's a functional and elegantly classic sofa set."
         },
         {
@@ -235,6 +255,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fliving%2Fimg_5.jpg?alt=media&token=626be441-3be1-4f36-b6b1-ea56cf920f28",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Easy to grow houseplant features large green leaves that add instant life and beauty to any room. The monstera features large leaves creating an instant designer impact and adding life to a brightly lit room at home, on a lightly shaded porch, or in the office. It grows best near a sunny window. Set a monstera into a room and it will become an instant focal point. The tall, leafy shape of this plant is like a living piece of art. monstera prefers bright indirect light and likes regular watering. It needs the right spot in your home to shine. Monstera is an ideal houseplant for any home, apartment, or office with the right light. Its lush form and green fronds make this houseplant a great gift."
         },
         {
@@ -245,6 +266,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fliving%2Fimg_4.jpg?alt=media&token=a1cc9b88-a6fc-479c-a482-9a45748a9820",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Give your home a unique-modern look with this beautiful coffee table. The contemporary design creates a great addition to any home décor. Simple in silhouette yet has a sturdy construction, this coffee table features a spacious top and will add an elegant feel to your home. It is an addition of style and functionality all in one."
         },
         {
@@ -255,6 +277,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fliving%2Fimg_6.webp?alt=media&token=a5c139a4-ca16-4cae-9a29-11f08afd7a38",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "We love coffee tables for their ability to tie together your living room's look, but this one features a design with handy storage to help you corral clutter. Crafted from a blend of solid and engineered wood, this table features a two-tone finish, turned legs, and brass button pulls for a classic look with farmhouse or French country appeal. It features three drawers and a lower shelf, so you can easily stow games, remotes, and other clutter. Measuring 19'' H and 52'' W, it's a low-profile option that's perfect for larger seating arrangements. Hand-curated by Kelly Clarkson."
         }
       ]
@@ -270,6 +293,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_1.jpg?alt=media&token=ec00a632-d550-4ac0-8f4d-c58f10832bb4",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "The mesh back of chair has excellent elasticity, completely suitable for the waist and back curve. It provides comfortable support which helps you to maintain a relaxed posture in a long hours of work. It is easier to disperse pressure and relieve muscle fatigue."
         },
         {
@@ -280,6 +304,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_2.webp?alt=media&token=7388cf35-002c-4a1e-818e-4bbd4fdc719e",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Featuring a slender rectangular silhouette with a clean white finish, this office storage cabinet with 4 high-side drawers offers flexible spacious storage options to keep your files, books, and writing utensils well-organized and easy to find. It is ideal for office, study room, bedroom, living room, etc."
         },
         {
@@ -290,6 +315,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_3.jpg?alt=media&token=ba1d6b2d-32f7-4721-b2dc-9a89ab9c6293",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Classic office desk accessories don't have to be plain-looking and uninspiring! The wireline of office desk accessories will add a touch of sophistication and style to your desk or office while providing the reliable functionality that you need to get the job done. Organize your personal workspace by adding a desk organizer, tabletop file tray or the entire collection. If you are looking for the perfect office gift, these unique desk accessories will for sure be a hit!"
         },
         {
@@ -300,6 +326,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_5.jpg?alt=media&token=640f64e2-535c-4182-beee-5fd97ae09c3c",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This task chair features rich channel tufting and a sleek gold base for the right amount of glam style in your home office. It's made from solid and engineered wood, and it's built on a five-pronged iron base for smooth movement across carpeting. This foam-filled chair showcases recessed arms and a waterfall seat that's wrapped in velvet upholstery in your choice of color. It also has a swivel design that makes it easy to go from one project to the next. Plus, this chair includes a seat height adjustment lever so you can sit comfortably."
         },
         {
@@ -310,6 +337,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Foffice%2Fimg_6.webp?alt=media&token=38cd6fd8-d710-476a-8f26-6a1cb565bec1",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This rectangular computer desk streamlines your WFH space with extra storage and a sleek look. It's made from engineered wood with a desktop surface measuring 39.4'' wide that's ideal for a computer, work light, and caffeinated beverage. The body features two soft-close drawers with cutout pulls that are great for office supplies, charging cords, and extra papers. We love the straight, flared legs that leave plenty of foot room and reference mid-century modern design. Plus, this desk has a finished back, so it looks just as good up against a wall or in the center of the room."
         }
       ]
@@ -325,6 +353,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fdining%2Fimg_1.jpg?alt=media&token=2f10050f-223e-40d5-b61e-9987916d3caf",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "The hardest working accent in your home, kitchen islands tuck away serveware, assist with food prep, and offer a convenient spot to set out hors d’oeuvres. This one is perfect for tucking into the corner of your kitchen or dining space, extra counter space, or a place to set your microwave. Two drawers and four cabinets offer plenty of room to stow away linens, glassware, and infrequently used kitchen appliances."
         },
         {
@@ -335,6 +364,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fdining%2Fimg_2.webp?alt=media&token=61a9bc8f-483c-471d-a103-8589b3286177",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "A bread box that doesn't take up extra space in your kitchen! Our roll-top bread box has a flat top, so you can store canisters, etc. on top of it. With a large grip for easy opening. Plus it stores all kinds of bread: It's ideal for your loaves, bread rolls, bagels, or maybe muffins."
         },
         {
@@ -345,6 +375,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fdining%2Fimg_3.jpg?alt=media&token=23eccff5-8125-4485-99e0-c8c83bc1ea7a",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Clear out your cluttered cabinets and keep your favorite teacups and coffee mugs neatly on display with this ten-mug tree! Crafted of straps of sturdy steel in an industrial finish, this design strikes an open, cone-shaped silhouette with four ball feet. Rounding out the design, ten bent hooks line the tree, tilting upward to hang your favorite mugs. Perfectly placed on the kitchen island, this piece is great for dessert buffets next time you’re entertaining."
         },
         {
@@ -355,6 +386,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fdining%2Fimg_4.jpg?alt=media&token=eecc5a5d-6531-46f7-ba06-b66abaf19f0e",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Seat everyone for family dinners and casual Sunday brunches in mid-century style with this 6-piece extendable dining set. The clean-lined table strikes a rectangular silhouette, and features a self-storing 16 butterfly leaf that bumps seating capacity from four guests to six. Both of the side chairs feature flared tapered legs with a scooped back and are upholstered with a foam filling for a touch of texture. Plus, the upholstered bench in a gray hue offers additional seating around the table."
         },
         {
@@ -365,6 +397,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fdining%2Fimg_5.webp?alt=media&token=b2a2a70d-e8ec-4ecc-aa46-88f0edb4fde0",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Make a bold, beautiful, mid-century modern choice for your dining room with these stunning dining chairs. This interesting pair of chairs is a retro addition to your dining room. Featuring wood frames, a lovely finish, and soft, fine upholstery, contrast and comfort are easy to achieve. A soft, curved silhouette is complemented by splayed legs for a completely charming look. Your carefully-curated space will be instantly upgraded when you complete your mid-century modern dining room with these stylish and unique chairs."
         }
       ]
@@ -380,6 +413,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fchair%2Fimg_1.jpg?alt=media&token=0882aba9-fc38-4e54-af90-ab6f11245285",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This rocking chair is suitable for the living room, bedroom, nursery, porch, offices, reception areas, and especially small spaces. Both adults and children can enjoy the fun and leisure time of the rocking chair. The modern candy color and lovely warm appearance help to add a unique style to your house."
         },
         {
@@ -390,6 +424,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fchair%2Fimg_2.webp?alt=media&token=d68557c5-f081-4fa9-8a72-3d932f93bb15",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "Arriving as a 2-piece set, this dining chair shows off a distinctive wingback silhouette and vertical channel tufting to create a standout mid-century modern accent for your dining table. It has a solid and engineered wood frame that rests on four angled, tapered iron legs with a glam gold finish. The rest of the chair is wrapped in luxe velvet and is filled with foam to provide just the right amount of support as you enjoy your morning cup of coffee or a casual meal with friends. Each chair in this set accommodates 250 lbs."
         },
         {
@@ -400,6 +435,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fchair%2Fimg_3.webp?alt=media&token=8ebc92e5-4ef0-4a9e-ac0a-5db5ef03d5d4",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This seashell-inspired barrel chair adds a touch of texture to your living room decor. It’s made from a solid and engineered wood frame, foam-filled sinuous spring cushions, velvet upholstery, and iron legs. This accent chair features an arched, vertical channel-tufted back, a smooth circular seat, and shiny gold-toned legs. Available in a range of finishes to blend into neutral decor or provide a splash of color, this chair works in traditional, modern, and contemporary spaces alike."
         },
         {
@@ -410,6 +446,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fchair%2Fimg_4.webp?alt=media&token=ad1f2e91-dda6-4618-912c-7c213968d4e9",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "This barrel chair and ottoman set create a cozy reading nook with a classic style. It's made with an engineered wood frame that sits on plastic block legs in a black hue. The chair features a rounded back that curves around the sides to act as arms, wrapping you up. Filled with foam, the seat is made with sinuous springs for extra support. We love that both the armchair and the ottoman are upholstered with traditional, subtle button tufting. It has a weight capacity of 300 pounds."
         },
         {
@@ -420,6 +457,7 @@
           "image": "https://firebasestorage.googleapis.com/v0/b/myreactshop-c5f21.appspot.com/o/catalog%2Fchair%2Fimg_5.webp?alt=media&token=9650c51b-441e-4cf1-8722-fd572b12652c",
           "manufacturer": "",
           "material": "",
+          "favorite": false,
           "description": "After a long day of hard working, everyone needs a small independent space to relax . Sometimes, a comfy living room chair with ottoman and pillow accomplishes this perfectly. This upholstered barrel armchair is dedicated to relieving the fatigue of each customer's day. It is suitable for all groups of people, for tall people, reasonable arm height and ottoman will make your shoulder relaxing. For small-size customers, the soft pillow and the smooth curvature of the chair back will make you feel the comfort and sense of security like being hugged. The fluffy or linen fabric feels cozy when it touches the skin. The soft cushion is filled with dense sponge, make you sit comfortably but not excessively sink. The same goes for the round ottoman, which provide the most comfortable experience for your legs. Also, this mid century modern accent chair has removable cushion which makes the chair easy to clean. You can read books, watch Tiktok, or take a nap on this chair. No matter how long you sit, this upholstered side chair will not make you feel any discomfort. The wood legs are made by solid rubber wood and they can handle 300 lbs. weight. At the same time, this is a very simple chair to install, all four legs are universal, you just need to make sure that the right angle and screw on, then you can leave it in the living room, bedroom or office to relieve tiredness."
         }
       ]
