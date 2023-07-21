@@ -70,8 +70,7 @@
 
 .itemsCart{
     width: 70%;
-    height: 100vh;
-    overflow: auto;
+    padding-bottom: calc(var(--index) * 5);
 }
 
 .itemsFavorite{

@@ -1,8 +1,8 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
 import star from '@assets/images/product_page/Star.svg';
-//import heart from '@assets/images/product_page/Heart.svg';
+import {ReactComponent as Heart} from '@assets/images/product_page/Heart.svg';
 import citibank from '@assets/images/product_page/citibank.svg';
 import gazprombank from '@assets/images/product_page/gazprombank.svg';
 import raiffeisen from '@assets/images/product_page/raiffeisen.svg';
@@ -19,7 +19,8 @@ const ProductPage = () => {
     const params = useParams();
     const location = useLocation();
     const index = params.id;
-
+    const [isHeart, setIsHeart] = useState(false);
+    const [isCart, setIsCart] = useState(false);
     const {catalog} = useContext(CatalogeList);
     const {newCollection} = useContext(NewCollection);
 
@@ -35,6 +36,7 @@ const ProductPage = () => {
                 }
             })
         }); 
+        setIsCart(!isCart);
     }
 
     const addToFavorite = () => {
@@ -45,6 +47,7 @@ const ProductPage = () => {
                 }
             });
          });
+         setIsHeart(!isHeart);
     }
  
     return ( <>
@@ -93,8 +96,8 @@ const ProductPage = () => {
                                                 </div>
                                                 <div className={classNames(style.inner_column, style.column_gap)}>
                                                     <div className={style.buy_buttons}>
-                                                        <MyButtonYellow onClick={addToCart}>Add to Cart</MyButtonYellow>
-                                                        <MyButtonTab onClick={addToFavorite}><div className={style.heart}></div></MyButtonTab>
+                                                        <MyButtonYellow onClick={addToCart} isActive={isCart}>{!isCart ? "Add to Cart" : "Added to Cart"}</MyButtonYellow>
+                                                        <Heart onClick={addToFavorite} className={!isHeart ? style.heart : style.heartActive}></Heart>
                                                     </div>
                                                     <MyButtonTab>Buy in credit</MyButtonTab>
                                                     <div className={style.icons}>

@@ -10,7 +10,6 @@ import 'swiper/css/parallax';
 import 'swiper/css/autoplay';
 
 
-
 const CollectionList = () => {
     const {newCollection} = useContext(NewCollection);
     const navigate = useNavigate();

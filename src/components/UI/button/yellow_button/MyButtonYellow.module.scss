@@ -17,3 +17,15 @@
     color: $default;
     border: 1px solid  $default;
 }
+
+.buttonActive{
+    border: none;
+    border-radius: 21px;
+    border: 1px solid  $default;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+    color: $default;
+    cursor: pointer;
+}

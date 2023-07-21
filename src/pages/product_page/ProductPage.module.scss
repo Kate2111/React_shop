@@ -116,13 +116,7 @@
 .buy_buttons{
     display: flex;
     justify-content: space-between;
-}
-
-.heart{
-    background-image: url(../../assets/images/product_page/Heart.svg);
-    background-repeat: no-repeat;
-    width: 19px;
-    height: 17px;
+    align-items: center;
 }
 
 .icons{
@@ -139,9 +133,9 @@
 }
 
 .image{
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .img {
@@ -150,3 +144,22 @@
 }
 
 
+.heart{
+    cursor: pointer; 
+}
+
+.heartActive{
+    fill: $yellow;
+    path{
+        stroke: $yellow; 
+    }
+}
+
+.heart:hover path{
+    stroke: $yellow;
+}
+
+.heart:active path{
+    stroke: $yellow; 
+    fill: $yellow; 
+}

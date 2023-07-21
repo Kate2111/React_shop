@@ -1,13 +1,13 @@
 @import 'src/assets/styles/_variables';
 
 .tab{
-    border: 1px solid  rgba(#454647, .5);
+    border: 1px solid $default;
     border-radius: 20px;
     font-weight: 600;
     font-size: 14px;
     line-height: 28px;
     text-align: center;
-    color: #8F8D8D;
+    color: $default;
     padding: 6px 16px;
     background-color: transparent;
     &:hover{

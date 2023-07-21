@@ -23,7 +23,7 @@ function App() {
     getDataList('catalog')
     .then(res=>setCatalog(res))
     .catch(err=>console.log(err));
-  }, [])
+  }, [catalog])
   
   useEffect(() => {
     getDataList('newcollection')
@@ -38,7 +38,7 @@ function App() {
     .then(res=>setCart(res))
     .then(console.log(cart))
     .catch(arr=>console.log(arr))
-  }, [])
+  }, [cart])
 
   useEffect(() => {
     getDataList('favorite')
@@ -46,7 +46,7 @@ function App() {
     .then(res=>setFavorite(res))
     .then(console.log(favorite))
     .catch(arr=>console.log(arr))
-  }, [])
+  }, [favorite])
 
   const [isMain] = useState(true);
   
@@ -55,11 +55,13 @@ function App() {
         <Routes>
         
             <Route exact path="/React_shop" element={
-              <NewCollection.Provider value={{newCollection, setNewCollection}}>
-                    <LayoutPage isMain={isMain}>
-                      <MainPage/>
-                    </LayoutPage>
-              </NewCollection.Provider>}
+              <CatalogeList.Provider value={{catalog, setCatalog}}>
+                <NewCollection.Provider value={{newCollection, setNewCollection}}>
+                      <LayoutPage isMain={isMain}>
+                        <MainPage/>
+                      </LayoutPage>
+                </NewCollection.Provider>
+              </CatalogeList.Provider>}
             />
           
             <Route exact path="/React_shop/catalog" element={
