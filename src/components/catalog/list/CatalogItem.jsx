@@ -1,20 +1,21 @@
-import React,{ useState } from 'react';
+import React,{ useState, useContext } from 'react';
 import style from './CatalogList.module.scss';
 import {useNavigate} from 'react-router-dom';
 import {ReactComponent as Cart}  from '@assets/images/catalog_page/Buy.svg';
 import {ReactComponent as Heart}  from '@assets/images/catalog_page/Heart.svg';
 import { postDataList } from '@API/firebase';
+import { AppContext } from '../../../API/context';
 
 const CatalogItem = ({elem, category}) => {
     const navigate = useNavigate();
     const [isHeart, setIsHeart] = useState(false);
     const [isCart, setIsCart] = useState(false);
+    const [favorite, setFavorite] = useContext(AppContext)[3];
 
-    
     const addToFavorite = (index) => {
         if (elem.id === index) {
             setIsHeart(!elem.favorite);
-            postDataList('favorite', {...elem, favorite: !elem.favorite}, elem.id);
+            postDataList('favorite', elem, elem.id);
             console.log(elem)
         }
     }
@@ -42,7 +43,7 @@ const CatalogItem = ({elem, category}) => {
                     <p className={style.price}>{elem.price} $</p>
                     <div className={style.icons}>
                         <Heart 
-                            className={!isHeart ? style.icon : style.iconActive}
+                            className={!elem.favorite ? style.icon : style.iconActive}
                             onClick={() => addToFavorite(elem.id)}
                         />
                         <Cart 

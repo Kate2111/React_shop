@@ -1,12 +1,13 @@
 import React, {useContext} from 'react';
 import CatalogItem from '@components/catalog/list/CatalogItem';
 import style from '../cart_page/CartPage.module.scss'
-import {FavoritList} from '@API/context';
+//import {FavoritList} from '@API/context';
 import imptyImage from '@assets/images/favorite/impty.png'
 import classNames from 'classnames';
+import { AppContext } from '../../API/context';
 
 const FavoritePage = ({category}) => {
-    const {favorite, setFavorite} = useContext(FavoritList)
+    const [favorite] = useContext(AppContext)[3];
 
     return (
         <>
@@ -37,6 +38,7 @@ const FavoritePage = ({category}) => {
                                     favorite.map(elem => {
                                         return <CatalogItem
                                                 elem={elem}
+                                                key={elem.id}
                                             />
                                                 
                                     })

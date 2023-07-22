@@ -1,18 +1,79 @@
-import React, { useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {getDataList} from './API/firebase';
-import {NewCollection, CatalogeList, FavoritList, CartList} from './API/context';
+import { AppContext } from './API/context';
 import LayoutPage from '@components/layout/LayoutPage';
 import MainPage from './pages/main_page/MainPage';
 import CatalogPage from './pages/catalog_page/CatalogPage';
 import ProductPage from './pages/product_page/ProductPage';
 import CartPage from './pages/cart_page/CartPage';
 import FavoritePage from './pages/favorite_page/FavoritePage';
-import LoginPage from './pages/login/LoginPage';
+//import LoginPage from './pages/login/LoginPage';
+import { useFetching } from './hooks/useFatching';
 
 
+function App() {
+  const [catalog, setCatalog, isLoadingCatalog, isErrorCatalog] = useFetching('catalog');
+  const [newCollection, setNewCollection,isLoadingNewCollection, isErrorNewCollection] = useFetching('newcollection');
+  const [cart, setCart, isLoadingCart, isErrorCart] = useFetching('cart');
+  const [favorite, setFavorite, isLoadingFavorite, isErrorFavorite] = useFetching('favorite');
 
+  /* const contextValue = {
+    newCollection, setNewCollection,
+    catalog, setCatalog,
+    favorite, setFavorite,
+    cart, setCart
+  }; */
 
+  const contextValue = [
+    [catalog, setCatalog, isLoadingCatalog, isErrorCatalog],
+    [newCollection, setNewCollection,isLoadingNewCollection, isErrorNewCollection],
+    [cart, setCart, isLoadingCart, isErrorCart],
+    [favorite, setFavorite, isLoadingFavorite, isErrorFavorite]
+  ];
+
+  const [isMain] = useState(true);
+  
+  return (<>
+    <AppContext.Provider value={contextValue}>
+        <BrowserRouter>
+            <Routes>
+                <Route exact path="/React_shop" element={
+                    <LayoutPage isMain={isMain}>
+                        <MainPage/>
+                    </LayoutPage>}
+                />
+       
+                <Route exact path="/React_shop/catalog" element={
+                    <LayoutPage>
+                        <CatalogPage/>
+                    </LayoutPage>}
+                />
+
+                <Route exact path="/React_shop/catalog/:id" element={
+                    <LayoutPage>
+                        <ProductPage/>
+                    </LayoutPage>} 
+                />
+
+                <Route exact path="/React_shop/cart" element={
+                    <LayoutPage>
+                        <CartPage category='cart'/>
+                    </LayoutPage>}
+                />
+
+                <Route exact path="/React_shop/favorite" element={
+                    <LayoutPage>
+                        <FavoritePage  category='favorite'/>
+                    </LayoutPage>}
+                />
+            </Routes>
+        </BrowserRouter>
+    </AppContext.Provider>
+  </>
+  );
+}
+
+/* 
 function App() {
   const [newCollection, setNewCollection] = useState([]);
   const [catalog, setCatalog] = useState([]);
@@ -53,7 +114,6 @@ function App() {
   return (<>
       <BrowserRouter>
         <Routes>
-        
             <Route exact path="/React_shop" element={
               <CatalogeList.Provider value={{catalog, setCatalog}}>
                 <NewCollection.Provider value={{newCollection, setNewCollection}}>
@@ -99,7 +159,7 @@ function App() {
             />
 
           
-          {/* private pages */}
+        
           
             <Route exact path="/React_shop/cart" element={
               <CartList.Provider value={{cart, setCart}}>
@@ -121,6 +181,6 @@ function App() {
       </BrowserRouter>
   </>
   );
-}
+} */
 
 export default App;

@@ -4,12 +4,14 @@ import style from './CartItem.module.scss';
 import classNames from 'classnames';
 import {ReactComponent as Heart} from '@assets/images/cart/heart.svg';
 import {ReactComponent as Remove} from '@assets/images/cart/delete.svg'
-import {CartList} from '@API/context';
+//import {CartList} from '@API/context';
 import { postDataList } from '@API/firebase';
+import { AppContext } from '../../../API/context';
 
 const CartItem = ({id, src, oldPrice, price, title}) => {
     const [count, setCount] = useState(0);
-    const {cart} = useContext(CartList);
+    const {cart} = useContext(AppContext);
+    const {setFavorite} = useContext(AppContext);
     const [isHeart, setIsHeart] = useState(false);
     const [isRemove, setIsRemove] = useState(false);
 
@@ -26,6 +28,7 @@ const CartItem = ({id, src, oldPrice, price, title}) => {
     const addToFavorite = () => {
         cart.forEach((elem) => {
             if (elem.id === id) {
+                setFavorite(prev => [...prev, elem])
                 postDataList('favorite', elem, elem.id);
             }
         });

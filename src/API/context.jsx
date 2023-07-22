@@ -1,11 +1,12 @@
 import { createContext} from "react";
 
+export const AppContext = createContext({});
 
-export const NewCollection = createContext(null);
+/* export const NewCollection = createContext(null);
 export const CatalogeList = createContext(null);
 export const FavoritList = createContext(null);
 export const CartList = createContext(null);
-
+ */
 
 /* export function AppProviders({children}) {
     const [newCollection, setNewCollection] = useState([]);

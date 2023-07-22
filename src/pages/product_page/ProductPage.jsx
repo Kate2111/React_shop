@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
 import star from '@assets/images/product_page/Star.svg';
@@ -11,7 +11,7 @@ import tinkoff from '@assets/images/product_page/tinkoff.svg';
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import MyButtonYellow from '@components/UI/button/yellow_button/MyButtonYellow';
 import classNames from 'classnames';
-import {CatalogeList, NewCollection} from '@API/context';
+import { AppContext } from '../../API/context';
 import { postDataList } from '../../API/firebase';
 
 
@@ -21,17 +21,22 @@ const ProductPage = () => {
     const index = params.id;
     const [isHeart, setIsHeart] = useState(false);
     const [isCart, setIsCart] = useState(false);
-    const {catalog} = useContext(CatalogeList);
-    const {newCollection} = useContext(NewCollection);
+
+    const [catalog] = useContext(AppContext)[0];
+    const [newCollection] = useContext(AppContext)[1];
+    const [cart, setCart] = useContext(AppContext)[2];
+    const [favorite, setFavorite] = useContext(AppContext)[3];
 
 
     const source = location.state && location.state.source;
     const data = source === 'newcollection' ? newCollection : catalog;
 
+
     const addToCart = () => {
         data.forEach(({info}) => {
             info.forEach((elem)=>{
                 if(elem.id === params.id) {
+                    setCart(prev => [...prev, elem]);
                     postDataList('cart', elem, elem.id);
                 }
             })
@@ -43,7 +48,9 @@ const ProductPage = () => {
         data.forEach(({ info }) => {
             info.forEach((elem) => {
                 if (elem.id === params.id) {
-                    postDataList('favorite', elem, elem.id)
+                    const updatedElem = { ...elem, favorite: !elem.favorite };
+                    setFavorite(prev => [...prev, updatedElem])
+                    postDataList('favorite', updatedElem, updatedElem.id)
                 }
             });
          });
@@ -54,7 +61,7 @@ const ProductPage = () => {
         <div className='container'>
             {
                 data.map(({info}) => {
-                    return info.map(({id, title, old_price, price, image, manufacturer, material, description})=> {
+                    return info.map(({id, title, old_price, price, image, manufacturer, material, description, favorite})=> {
                         if(index === id) {
                             return  (<div className={style.wrapper} key={id}>
                                         <div className={style.image}>
@@ -139,3 +146,5 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+

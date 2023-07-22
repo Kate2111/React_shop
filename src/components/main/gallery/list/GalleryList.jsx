@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import style from './Gallery.module.scss';
-import { CatalogeList } from '@API/context';
+//import { CatalogeList } from '@API/context';
 import {useNavigate} from 'react-router-dom';
 import classNames from 'classnames';
+import { AppContext } from '../../../../API/context';
 
 const GalleryList = ({active}) => {
-    const {catalog} = useContext(CatalogeList);
+    const [catalog] = useContext(AppContext)[0];
     const navigate = useNavigate();
 
     return (
@@ -19,12 +20,12 @@ const GalleryList = ({active}) => {
                                     firstFiveElements.map((elem) => {
                                         return <div className={classNames({[style.item]: true,[style['img-main']]: elem === firstFiveElements[0]})}
                                                     onClick={() => navigate(`/React_shop/catalog/${elem.id}`, { state: { source: 'catalog' } })}
+                                                    key={elem.id}
                                                 >
                                                     <img
                                                         className={style.img}
                                                         src={elem.image}
                                                         alt={category}
-                                                        key={elem.id}
                                                     />
                                                     <div className={style.info}>
                                                         <h6 className={style.title}>{elem.title}</h6>

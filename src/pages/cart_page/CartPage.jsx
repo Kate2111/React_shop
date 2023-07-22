@@ -1,5 +1,5 @@
-import React, {useContext, useState} from 'react';
-import { CartList } from '../../API/context';
+import React, {useContext} from 'react';
+import { AppContext } from '../../API/context';
 import CartItem from '@components/cart/item/CartItem';
 import CartForm from '@components/cart/form/CartForm';
 import MyButtonGreen from '@components/UI/button/green_button/MyButtonGreen';
@@ -10,7 +10,7 @@ import classNames from 'classnames';
 
 
 const CartPage = ({category}) => {
-    const {cart, setCart} = useContext(CartList);
+    const [cart] = useContext(AppContext)[2];
 
     const getSubTotal = () => {
         let sum = cart.reduce((acc, {old_price}) => {

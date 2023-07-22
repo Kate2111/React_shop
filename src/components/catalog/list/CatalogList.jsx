@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 import style from './CatalogList.module.scss';
-import {CatalogeList} from '@API/context';
+//import {CatalogeList} from '@API/context';
 import CatalogItem from './CatalogItem';
+import { AppContext } from '../../../API/context';
 
 const GalleryList = ({active}) => {
-    const {catalog} = useContext(CatalogeList);
+    const [catalog] = useContext(AppContext)[0];
 
     return (
         <>

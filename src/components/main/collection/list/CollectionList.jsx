@@ -1,17 +1,17 @@
 import React, {useContext} from 'react';
 import {useNavigate} from 'react-router-dom';
 import style from './Collection.module.scss';
-import {NewCollection} from '@API/context';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Mousewheel, Autoplay} from 'swiper/modules'
 import 'swiper/css';
 import 'swiper/css/mousewheel';
 import 'swiper/css/parallax';
 import 'swiper/css/autoplay';
+import { AppContext } from '../../../../API/context';
 
 
 const CollectionList = () => {
-    const {newCollection} = useContext(NewCollection);
+    const [newCollection] = useContext(AppContext)[1];
     const navigate = useNavigate();
 
 
