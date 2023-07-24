@@ -1,0 +1,35 @@
+@import '@assets/styles/_variables';
+
+.image {
+    height: 100%;
+    justify-self: stretch;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+    @extend %title-menu;
+    color: $title;
+    margin-bottom: 19px;
+    padding-bottom: 19px;
+    position: relative;
+    &::before{
+        content: '';
+        bottom: 0;
+        position: absolute;
+        width: 80%;
+        height: 1px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: #6D7278;
+    }
+}
+
+.text{
+    font-size: 14px;
+    line-height: 24px;
+    color: #707070;
+    font-weight: 600;
+}
+

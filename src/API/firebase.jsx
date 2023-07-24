@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app';
-import {getDatabase, get, set, ref} from 'firebase/database';
+import {getDatabase, get, set, ref, remove} from 'firebase/database';
 
 
 const firebaseConfig = {
@@ -35,6 +35,26 @@ export const postDataList = async (recourse, elem, id) => {
     console.log('good')
   } catch(err) {
     console.error(err);
+  }
+}
+
+export const deleteElemToDataList = async(recourse, id) => {
+  const recourseRef = ref(db,`${recourse}/${id}`);
+
+  try{
+    remove(recourseRef)
+  } catch(err) {
+    console.error(err)
+  }
+}
+
+export const deleteAllElems = async() => {
+  const recourseRef = ref(db,'cart');
+
+  try{
+    remove(recourseRef)
+  } catch(err) {
+    console.error(err)
   }
 }
 

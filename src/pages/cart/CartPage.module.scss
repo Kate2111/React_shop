@@ -1,0 +1,35 @@
+@import '@assets/styles/_variables';
+
+.title{
+    font-size: calc(var(--index) * 2)
+}
+
+.wrapper{
+    min-height: 800px;
+}
+
+.inner{
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(var(--index) * 4);
+}
+
+.itemsCart{
+    width: 70%;
+    padding-bottom: calc(var(--index) * 5);
+}
+
+.itemsFavorite{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    justify-content: flex-start;
+}

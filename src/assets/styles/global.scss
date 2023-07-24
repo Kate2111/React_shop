@@ -69,3 +69,31 @@ body{
 }
 
 
+//hover effect item collection
+.item {
+  position: relative;
+  &:hover{
+      cursor: pointer;
+      .info{
+          opacity: 1;
+      }
+  }
+  overflow: hidden;
+}
+
+.info{
+  position: absolute;
+  background: rgba(#FFFFFF, 0.6);
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+

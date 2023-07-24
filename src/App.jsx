@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { AppContext } from './API/context';
 import LayoutPage from '@components/layout/LayoutPage';
-import MainPage from './pages/main_page/MainPage';
-import CatalogPage from './pages/catalog_page/CatalogPage';
-import ProductPage from './pages/product_page/ProductPage';
-import CartPage from './pages/cart_page/CartPage';
-import FavoritePage from './pages/favorite_page/FavoritePage';
+import MainPage from './pages/main/MainPage';
+import CatalogPage from './pages/catalog/CatalogPage';
+import ProductPage from './pages/product/ProductPage';
+import CartPage from './pages/cart/CartPage';
+import FavoritePage from './pages/favorite/FavoritePage';
 //import LoginPage from './pages/login/LoginPage';
 import { useFetching } from './hooks/useFatching';
 

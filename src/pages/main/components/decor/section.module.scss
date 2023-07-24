@@ -1,0 +1,33 @@
+@import 'src/assets/styles/_variables';
+
+.decor{
+    background-image: url(../../../../assets/images/decor_bg.jpg);
+    padding: 172px 0 156px;
+    margin-bottom: 79px;
+}
+
+.title{
+        max-width: 540px;
+        font-size: 60px;
+        line-height: 80px;
+        @extend %title-menu;
+        color: $title;
+        position: relative;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        &::before{
+            content: '';
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #979797;
+            width: 200px;
+        }
+}
+
+.text {
+        max-width: 540px;
+}
+

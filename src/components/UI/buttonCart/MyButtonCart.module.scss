@@ -1,0 +1,13 @@
+@import '@assets/styles/_variables';
+
+
+.gray{
+    color: $greyCart;
+    font-size: calc(var(--index) * 0.8);
+}
+
+.grayButton {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
