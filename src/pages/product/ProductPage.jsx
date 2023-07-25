@@ -3,16 +3,17 @@ import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
 import star from '@assets/images/product_page/Star.svg';
 import {ReactComponent as Heart} from '@assets/images/product_page/Heart.svg';
-import citibank from '@assets/images/product_page/citibank.svg';
-import gazprombank from '@assets/images/product_page/gazprombank.svg';
-import raiffeisen from '@assets/images/product_page/raiffeisen.svg';
-import sbp from '@assets/images/product_page/sbp.svg';
-import tinkoff from '@assets/images/product_page/tinkoff.svg';
+
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import MyButtonYellow from '@components/UI/button/yellow_button/MyButtonYellow';
 import classNames from 'classnames';
-import { AppContext } from '../../API/context';
-import { postDataList } from '../../API/firebase';
+import { AppContext } from '@API/context';
+import { postDataList, updateElem, deleteElemToDataList } from '@API/firebase';
+import SizeAndFeatures from './components/size-and-features';
+import IconsBank from './components/icons/bank';
+import IconsStars from './components/icons/stars';
+import BlockColumn from './components/block/block-column';
+import BlockRow from './components/block/block-row';
 
 
 const ProductPage = () => {
@@ -22,7 +23,7 @@ const ProductPage = () => {
     const [isHeart, setIsHeart] = useState(false);
     const [isCart, setIsCart] = useState(false);
 
-    const [catalog] = useContext(AppContext)[0];
+    const [catalog, setCatalog] = useContext(AppContext)[0];
     const [newCollection] = useContext(AppContext)[1];
     const [cart, setCart] = useContext(AppContext)[2];
     const [favorite, setFavorite] = useContext(AppContext)[3];
@@ -31,6 +32,55 @@ const ProductPage = () => {
     const source = location.state && location.state.source;
     const data = source === 'newcollection' ? newCollection : catalog;
 
+    //Сохраняю в isHeart состояние favorite из информации об элементе базы данных catalog или newCollection
+    useEffect(() => {
+        function getValueFavorite () {
+            data.forEach(({info}) => {
+                info.forEach((elem) => {
+                    if(elem.id === index) {
+                        setIsHeart(elem.favorite)
+                    }
+                })
+            })
+        }
+    
+        getValueFavorite ();
+    }, [data, index])
+
+    console.log(favorite);
+    const isElemPresent = favorite.some(elem => elem.id === index);
+    console.log(isElemPresent);
+
+    const updateFavoriteData = (elem, source, index, indexElem) => {
+        const updatedElem = { ...elem, favorite: !isHeart };
+
+        if(!isHeart) {
+            postDataList('favorite', updatedElem, updatedElem.id)
+            updateElem(source, index, indexElem, true)
+            //setCatalog() 
+        } else {
+            setFavorite(prev => [...prev].filter(elem => elem.id !== index))
+            deleteElemToDataList('favorite', elem.id);
+            updateElem(source, index, indexElem, false)
+        }   
+    };
+
+    const addToFavorite = () => {
+        setIsHeart(prevIsHeart => !prevIsHeart);
+
+        data.forEach(({ info }, index) => {
+            info.forEach((elem, indexElem) => {
+                if (elem.id === params.id) {
+                    updateFavoriteData(elem, source, index, indexElem);
+                    setFavorite(prev => {
+                        if (!isElemPresent) {
+                            return [...prev, { ...elem, favorite: !isHeart }];
+                        }
+                    });
+                }
+            });
+        });
+    };
 
     const addToCart = () => {
         data.forEach(({info}) => {
@@ -44,19 +94,6 @@ const ProductPage = () => {
         setIsCart(!isCart);
     }
 
-    const addToFavorite = () => {
-        data.forEach(({ info }) => {
-            info.forEach((elem) => {
-                if (elem.id === params.id) {
-                    const updatedElem = { ...elem, favorite: !elem.favorite };
-                    setFavorite(prev => [...prev, updatedElem])
-                    postDataList('favorite', updatedElem, updatedElem.id)
-                }
-            });
-         });
-         setIsHeart(!isHeart);
-    }
- 
     return ( <>
         <div className='container'>
             {
@@ -73,23 +110,14 @@ const ProductPage = () => {
                                         </div>
                                         <div className={style.info}>
                                             <h1 className={style.title}>{title}</h1>
-                                            <div className={classNames(style.inner, style.inner_bottom)}>
-                                                <p className={style.text}>Buyer rating:</p>
-                                                <div className={style.inner_review}>
-                                                    <div className={style.inner_star}>
-                                                        <img src={star} alt="star"/>
-                                                        <img src={star} alt="star"/>
-                                                        <img src={star} alt="star"/>
-                                                        <img src={star} alt="star"/>
-                                                        <img src={star} alt="star"/>
-                                                    </div>
-                                                    <p className={style.text}>No reviews</p>
-                                                </div>
-                                            </div>
-                                            <div className={classNames(style.inner, style.inner_bottom)}>
-                                                <p className={style.text}>Product code:</p>
-                                                <p className={style.id_product}>{id}</p>
-                                            </div>
+                                            <BlockRow subtitle="Buyer rating:">
+                                                <IconsStars/> 
+                                            </BlockRow>
+
+                                            <BlockRow subtitle="Product code:">
+                                                    <p className={style.id_product}>{id}</p>
+                                            </BlockRow>
+                            
                                             <div className={classNames(style.inner, style.inner_bottom)}>
                                                 <div className={classNames(style.inner_column, style.column_gap)}>
                                                     <div>
@@ -103,36 +131,28 @@ const ProductPage = () => {
                                                 </div>
                                                 <div className={classNames(style.inner_column, style.column_gap)}>
                                                     <div className={style.buy_buttons}>
-                                                        <MyButtonYellow onClick={addToCart} isActive={isCart}>{!isCart ? "Add to Cart" : "Added to Cart"}</MyButtonYellow>
-                                                        <Heart onClick={addToFavorite} className={!isHeart ? style.heart : style.heartActive}></Heart>
+                                                        <MyButtonYellow 
+                                                            onClick={addToCart} 
+                                                            isActive={isCart}
+                                                        >
+                                                            {!isCart ? "Add to Cart" : "Added to Cart"}
+                                                        </MyButtonYellow>
+                                                        <Heart 
+                                                            onClick={addToFavorite} 
+                                                            className={!isHeart ? style.heart : style.heartActive}
+                                                        ></Heart>
                                                     </div>
                                                     <MyButtonTab>Buy in credit</MyButtonTab>
-                                                    <div className={style.icons}>
-                                                        <img className={style.icon} src={tinkoff} alt="tinkoff"/>
-                                                        <img className={style.icon} src={sbp} alt="sbp"/>
-                                                        <img className={style.icon} src={gazprombank} alt="gazprombank"/>
-                                                        <img className={style.icon} src={raiffeisen} alt="raiffeisen"/>
-                                                        <img className={style.icon} src={citibank} alt="citibank"/>
-                                                    </div>
+                                                    <IconsBank/>    
                                                 </div>
                                             </div>
-                                            <div className={style.inner_column}>
-                                                <h2 className={style.subtitle}>Size and Features</h2>
-                                                <div className={style.inner}>
-                                                    <p className={style.text}>Housing material</p>
-                                                    <div className={style.dots}></div>
-                                                    <p className={style.id_product}>{material}</p>
-                                                </div>
-                                                <div className={style.inner}>
-                                                    <p className={style.text}>Manufacturer</p>
-                                                    <div className={style.dots}></div>
-                                                    <p className={style.id_product}>{manufacturer}</p>
-                                                </div>
-                                            </div>
-                                            <div className={style.inner_column}>
-                                                <h2 className={style.subtitle}>Description</h2>
-                                                <p className={style.descr}>{description}</p>
-                                            </div>
+                                            <BlockColumn subtitle="Size and Features">
+                                                <SizeAndFeatures text="Housing material" info={material}/>
+                                                <SizeAndFeatures text="Manufacturer" info={manufacturer}/>
+                                            </BlockColumn>
+                                            <BlockColumn subtitle="Description">
+                                                <p className={style.text}>{description}</p>
+                                            </BlockColumn>
                                         </div>
                                     </div> )
                         }
@@ -146,5 +166,4 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
-
 

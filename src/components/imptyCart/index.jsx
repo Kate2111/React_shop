@@ -2,7 +2,7 @@ import React from 'react';
 import style from './impty.module.scss'
 import classNames from 'classnames';
 
-const index = ({title, subtitle, category, imptyImage}) => {
+const ImptyCart = ({title, subtitle, category, imptyImage}) => {
     return (
         <div className='container'>
             <div className={style.impty}>
@@ -19,4 +19,4 @@ const index = ({title, subtitle, category, imptyImage}) => {
     );
 };
 
-export default index;
+export default ImptyCart;

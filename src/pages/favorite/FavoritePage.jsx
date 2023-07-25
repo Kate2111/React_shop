@@ -1,18 +1,21 @@
 import React, {useContext} from 'react';
-import CatalogItem from '@components/itemCatalog';
+import { AppContext } from '../../API/context';
+import FavoriteItem from '@components/itemCatalog';
+import LoaderCircle from '@components/loaders/loaderCircle';
 import ImptyCart from '@components/imptyCart'
 import style from '../cart/CartPage.module.scss'
 import imptyImage from '@assets/images/favorite/impty.png'
-import { AppContext } from '../../API/context';
+
 
 const FavoritePage = ({category}) => {
     const [favorite, setFavorite, isLoadingFavorite] = useContext(AppContext)[3];
 
+    console.log(favorite)
     return (
         <>
             {
                 isLoadingFavorite
-                ? (<h1>Идут загрузка</h1>)
+                ? (<LoaderCircle/>)
                 :   favorite.length === 0
                     ?   (<ImptyCart  
                             title='Start Building Your List!'
@@ -29,7 +32,7 @@ const FavoritePage = ({category}) => {
                                     <div className={category === 'cart' ? style.itemsCart : style.itemsFavorite}>
                                         {
                                             favorite.map(elem => {
-                                                return <CatalogItem
+                                                return <FavoriteItem
                                                         key={elem.id}
                                                         elem={elem}
                                                         category={category}

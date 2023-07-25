@@ -17,13 +17,6 @@ function App() {
   const [cart, setCart, isLoadingCart, isErrorCart] = useFetching('cart');
   const [favorite, setFavorite, isLoadingFavorite, isErrorFavorite] = useFetching('favorite');
 
-  /* const contextValue = {
-    newCollection, setNewCollection,
-    catalog, setCatalog,
-    favorite, setFavorite,
-    cart, setCart
-  }; */
-
   const contextValue = [
     [catalog, setCatalog, isLoadingCatalog, isErrorCatalog],
     [newCollection, setNewCollection,isLoadingNewCollection, isErrorNewCollection],

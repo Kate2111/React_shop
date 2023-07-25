@@ -10,6 +10,7 @@
 - AliExpress API
 - Webpack
 - Swiper-slider
+- React Content Loader
 
 рефакторинг кода, изначально проект был написан на чистом js, html, css
 

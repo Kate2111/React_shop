@@ -4,8 +4,8 @@
     background: $yellow;
     border: none;
     border-radius: 21px;
-    height: 40px;
-    width: 160px;
+    height: calc(var(--index) * 2);
+    width: calc(var(--index) * 10);
     text-align: center;
     color: $default;
     cursor: pointer;
@@ -22,8 +22,8 @@
     border: none;
     border-radius: 21px;
     border: 1px solid  $default;
-    height: 40px;
-    width: 160px;
+    height: calc(var(--index) * 2);
+    width: calc(var(--index) * 10);
     text-align: center;
     background-color: transparent;
     color: $default;

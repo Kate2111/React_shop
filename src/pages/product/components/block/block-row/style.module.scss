@@ -1,0 +1,14 @@
+@import '@assets/styles/_variables';
+
+.inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: calc(var(--index) * 1.1);
+}
+
+.text{
+    font-size: calc(var(--index) * 0.7);
+    font-weight: 400;
+    line-height: calc(var(--index) * 1.1);
+    letter-spacing: 0em;
+}

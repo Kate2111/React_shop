@@ -1,0 +1,13 @@
+@import '@assets/styles/_variables';
+
+.inner_column{
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle{
+    font-size: calc(var(--index) * 1.3);
+    font-weight: 600;
+    line-height: calc(var(--index) * 1.5);
+    margin: calc(var(--index) * 1.5) 0 calc(var(--index) * 1);
+}

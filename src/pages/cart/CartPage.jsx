@@ -3,6 +3,7 @@ import { AppContext } from '@API/context';
 import ImptyCart from '@components/imptyCart'
 import imptyImage from '@assets/images/cart/impty.png';
 import SectionCart from './components/section';
+import LoaderCircle from '@components/loaders/loaderCircle';
 
 
 const CartPage = ({category}) => {
@@ -12,7 +13,7 @@ const CartPage = ({category}) => {
         <>
             {
                 isLoadingCatalog
-                ? (<h1>Идут загрузка</h1>)
+                ? (<LoaderCircle/>)
                 : cart.length === 0
                     ?   (<ImptyCart  
                             title='Your Shopping Cart Is Empty'

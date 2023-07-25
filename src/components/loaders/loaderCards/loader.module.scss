@@ -1,0 +1,9 @@
+@import '@assets/styles/_variables';
+
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    justify-content: flex-start;
+}

@@ -10,7 +10,7 @@ const MenuList = ({arr, isMain}) => {
     return (
         <nav className={style.menu}>
             <div className={!isMain ? style.showLogo : style.hideLogo} onClick={() => navigate(`/React_shop`)}>
-                <img src={logo} alt="login"/>
+                <img src={logo} alt="logo"/>
             </div>
             <ul className={style.list}>
                 {

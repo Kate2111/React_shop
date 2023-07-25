@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app';
-import {getDatabase, get, set, ref, remove} from 'firebase/database';
+import {getDatabase, get, set, ref, remove, update} from 'firebase/database';
 
 
 const firebaseConfig = {
@@ -58,5 +58,16 @@ export const deleteAllElems = async() => {
   }
 }
 
+export const updateElem = async(recourse, index, id, favoriteValue) => {
+  const recourseRef = ref(db,`${recourse}/${index}/info/${id}`);
+  
+  try{
+    update(recourseRef, {
+      favorite: favoriteValue
+    });
+  } catch (err) {
+    console.error(err)
+  }
+}
 
 

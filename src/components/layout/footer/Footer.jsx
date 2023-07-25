@@ -8,7 +8,7 @@ import MyButtonBlack from '../../UI/button/black_button/MyButtonBlack';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='footer'>
             <div className={style.content}>
                 <div className="container">
                     <div className={style.inner}>

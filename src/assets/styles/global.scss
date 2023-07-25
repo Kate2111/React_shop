@@ -13,19 +13,22 @@ body{
 	font-weight: 400;
 	line-height: 27px;
 	color: $default;
-  /* color: #5A5A5A; */
 	overflow-x: hidden;
-    height: 100%;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
 }
 
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	height: 100%;
 }
 
 .main {
-	flex: 1 0 auto;
+  flex-grow: 1;
 }
 .footer {
 	flex: 0 0 auto;

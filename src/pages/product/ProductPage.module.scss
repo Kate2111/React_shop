@@ -11,25 +11,19 @@
 .wrapper{
     display: flex;
     flex-direction: row;
-    padding-bottom: 50px;
+    padding-bottom: calc(var(--index) * 3);;
     justify-content: center;
 }
 
 .info{
     width: 50%;
-    padding: 0 40px 40px;
+    padding: 0 calc(var(--index) * 2.3) calc(var(--index) * 2.3);;
 }
 
 .title{
-    font-size: 40px;
-    line-height: 51px;
-    margin-bottom: 29px;
-}
-.subtitle{
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-    margin: 30px 0 20px;
+    font-size: calc(var(--index) * 1.8);
+    line-height: calc(var(--index) * 2.3);
+    margin-bottom: calc(var(--index) * 1);
 }
 
 .inner{
@@ -41,55 +35,16 @@
     margin-bottom: 20px;
 }
 
-.inner_star{
-    display: flex;
-    justify-content: space-between;
-    gap: 5px;
-}
-
-
-.inner_review{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
 .text{
-    font-size: 16px;
+    font-size: calc(var(--index) * 0.7);
     font-weight: 400;
-    line-height: 22px;
+    line-height: calc(var(--index) * 1.1);
     letter-spacing: 0em;
 }
 
-.dots{
-    position: relative;
-    top: -4px;
-    border-bottom: 1px black dashed;
-    flex: 1;
-    margin: 0 10px;
-}
-
-.descr{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
-}
-
-.id_product{
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 0em;
-}
-
-
-.price{
-    font-size: 13px;
-    font-weight: 700;
-}
 
 .new_price{
-    font-size: 28px;
+    font-size: calc(var(--index) * 1.5);
     font-weight: 700;
     line-height: 38px;
     letter-spacing: 0em;
@@ -97,7 +52,7 @@
 }
 
 .last_price{
-    font-size: 18px;
+    font-size: calc(var(--index) * 1);
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0em;
@@ -119,15 +74,6 @@
     align-items: center;
 }
 
-.icons{
-    display: flex;
-    gap: 20px;
-}
-
-.icon{
-    cursor: pointer;
-}
-
 .active{
     display: flex;
 }
@@ -139,7 +85,7 @@
 }
 
 .img {
-    max-height: 500px;
+    max-height: calc(var(--index) * 28);
     object-fit: cover;
 }
 
@@ -162,4 +108,11 @@
 .heart:active path{
     stroke: $yellow; 
     fill: $yellow; 
+}
+
+.id_product{
+    font-size: calc(var(--index) * 0.9);
+    font-weight: 600;
+    line-height: calc(var(--index) * 1.1);
+    letter-spacing: 0em;
 }
