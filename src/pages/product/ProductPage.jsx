@@ -47,39 +47,61 @@ const ProductPage = () => {
         getValueFavorite ();
     }, [data, index])
 
-    console.log(favorite);
-    const isElemPresent = favorite.some(elem => elem.id === index);
-    console.log(isElemPresent);
-
     const updateFavoriteData = (elem, source, index, indexElem) => {
         const updatedElem = { ...elem, favorite: !isHeart };
 
         if(!isHeart) {
             postDataList('favorite', updatedElem, updatedElem.id)
-            updateElem(source, index, indexElem, true)
-            //setCatalog() 
+            updateElem(source, index, indexElem, true);
+            setFavorite(prev => {
+                const isElemPresent = favorite.some(elem => elem.id === params.id);
+                if (!isElemPresent) {
+                    return [...prev, { ...elem, favorite: !isHeart }];
+                }
+            });
+            setCatalog(prev => {
+                const updatedCatalog = prev.map(({ info }) => {
+                  return {
+                    info: info.map(elem => {
+                      if (elem.id === params.id) {
+                        return { ...elem, favorite: true };
+                      }
+                      return elem;
+                    })
+                  };
+                });
+                return updatedCatalog;
+            }); 
         } else {
-            setFavorite(prev => [...prev].filter(elem => elem.id !== index))
+            setFavorite(prev => [...prev].filter(elem => elem.id !== params.id))
+            setCatalog(prev => {
+                const updatedCatalog = prev.map(({ info }) => {
+                  return {
+                    info: info.map(elem => {
+                      if (elem.id === params.id) {
+                        return { ...elem, favorite: false };
+                      }
+                      return elem;
+                    })
+                  };
+                });
+                return updatedCatalog;
+            }); 
             deleteElemToDataList('favorite', elem.id);
-            updateElem(source, index, indexElem, false)
+            updateElem(source, index, indexElem, false);
         }   
     };
 
-    const addToFavorite = () => {
-        setIsHeart(prevIsHeart => !prevIsHeart);
-
-        data.forEach(({ info }, index) => {
+    const addToFavorite = async() => {
+        await data.forEach(({ info }, index) => {
             info.forEach((elem, indexElem) => {
                 if (elem.id === params.id) {
                     updateFavoriteData(elem, source, index, indexElem);
-                    setFavorite(prev => {
-                        if (!isElemPresent) {
-                            return [...prev, { ...elem, favorite: !isHeart }];
-                        }
-                    });
                 }
             });
         });
+
+        setIsHeart(!isHeart);
     };
 
     const addToCart = () => {
