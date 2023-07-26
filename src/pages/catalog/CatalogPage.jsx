@@ -15,7 +15,7 @@ const CatalogPage = () => {
             {
                 isLoadingCatalog 
                 ?   (<LoaderCards numberOfLoaderCards={6}/>) 
-                :   (<CatalogList />)
+                :   (<CatalogList/>)
             }
         </CatalogSection>
     </>

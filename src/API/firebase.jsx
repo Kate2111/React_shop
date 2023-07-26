@@ -58,12 +58,12 @@ export const deleteAllElems = async() => {
   }
 }
 
-export const updateElem = async(recourse, index, id, favoriteValue) => {
+export const updateElem = async(recourse, index, id, propertyName, isValue) => {
   const recourseRef = ref(db,`${recourse}/${index}/info/${id}`);
   
   try{
     update(recourseRef, {
-      favorite: favoriteValue
+      [propertyName]: isValue
     });
   } catch (err) {
     console.error(err)

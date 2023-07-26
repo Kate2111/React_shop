@@ -9,8 +9,8 @@ const SectionWithTabs = ({children}) => {
     const tabs = ['Bedroom furniture', 'Living room furniture', 'Office furniture', 'Dining room futniture', 'Chair']
     const [active, setActive] = useState(1);
 
-    const clonedChildren = React.Children.map(children, (child) => {
-        return React.cloneElement(child, { active });
+    const clonedChildren = React.Children.map(children, (child, index) => {
+        return React.cloneElement(child, {key: index, active });
     });
 
     return (

@@ -1,14 +1,13 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
-import star from '@assets/images/product_page/Star.svg';
 import {ReactComponent as Heart} from '@assets/images/product_page/Heart.svg';
-
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import MyButtonYellow from '@components/UI/button/yellow_button/MyButtonYellow';
 import classNames from 'classnames';
 import { AppContext } from '@API/context';
-import { postDataList, updateElem, deleteElemToDataList } from '@API/firebase';
+import { addToFavoriteOrCart } from '../../utils/addToFavoriteOrCart';
+import useProductState from '../../hooks/useProductState';
 import SizeAndFeatures from './components/size-and-features';
 import IconsBank from './components/icons/bank';
 import IconsStars from './components/icons/stars';
@@ -19,109 +18,26 @@ import BlockRow from './components/block/block-row';
 const ProductPage = () => {
     const params = useParams();
     const location = useLocation();
-    const index = params.id;
-    const [isHeart, setIsHeart] = useState(false);
-    const [isCart, setIsCart] = useState(false);
+    const pageID = params.id;
 
     const [catalog, setCatalog] = useContext(AppContext)[0];
-    const [newCollection] = useContext(AppContext)[1];
+    const [newCollection, setNewCollection] = useContext(AppContext)[1];
+
     const [cart, setCart] = useContext(AppContext)[2];
     const [favorite, setFavorite] = useContext(AppContext)[3];
 
-
-    const source = location.state && location.state.source;
+    const source = location.state && location.state.source; //catalog || newcollection
     const data = source === 'newcollection' ? newCollection : catalog;
+    const setData = source === 'newcollection' ? setNewCollection : setCatalog;
 
-    //Сохраняю в isHeart состояние favorite из информации об элементе базы данных catalog или newCollection
-    useEffect(() => {
-        function getValueFavorite () {
-            data.forEach(({info}) => {
-                info.forEach((elem) => {
-                    if(elem.id === index) {
-                        setIsHeart(elem.favorite)
-                    }
-                })
-            })
-        }
-    
-        getValueFavorite ();
-    }, [data, index])
-
-    const updateFavoriteData = (elem, source, index, indexElem) => {
-        const updatedElem = { ...elem, favorite: !isHeart };
-
-        if(!isHeart) {
-            postDataList('favorite', updatedElem, updatedElem.id)
-            updateElem(source, index, indexElem, true);
-            setFavorite(prev => {
-                const isElemPresent = favorite.some(elem => elem.id === params.id);
-                if (!isElemPresent) {
-                    return [...prev, { ...elem, favorite: !isHeart }];
-                }
-            });
-            setCatalog(prev => {
-                const updatedCatalog = prev.map(({ info }) => {
-                  return {
-                    info: info.map(elem => {
-                      if (elem.id === params.id) {
-                        return { ...elem, favorite: true };
-                      }
-                      return elem;
-                    })
-                  };
-                });
-                return updatedCatalog;
-            }); 
-        } else {
-            setFavorite(prev => [...prev].filter(elem => elem.id !== params.id))
-            setCatalog(prev => {
-                const updatedCatalog = prev.map(({ info }) => {
-                  return {
-                    info: info.map(elem => {
-                      if (elem.id === params.id) {
-                        return { ...elem, favorite: false };
-                      }
-                      return elem;
-                    })
-                  };
-                });
-                return updatedCatalog;
-            }); 
-            deleteElemToDataList('favorite', elem.id);
-            updateElem(source, index, indexElem, false);
-        }   
-    };
-
-    const addToFavorite = async() => {
-        await data.forEach(({ info }, index) => {
-            info.forEach((elem, indexElem) => {
-                if (elem.id === params.id) {
-                    updateFavoriteData(elem, source, index, indexElem);
-                }
-            });
-        });
-
-        setIsHeart(!isHeart);
-    };
-
-    const addToCart = () => {
-        data.forEach(({info}) => {
-            info.forEach((elem)=>{
-                if(elem.id === params.id) {
-                    setCart(prev => [...prev, elem]);
-                    postDataList('cart', elem, elem.id);
-                }
-            })
-        }); 
-        setIsCart(!isCart);
-    }
+    const [isHeart, setIsHeart, isCart, setIsCart] = useProductState(data, pageID);
 
     return ( <>
         <div className='container'>
             {
                 data.map(({info}) => {
-                    return info.map(({id, title, old_price, price, image, manufacturer, material, description, favorite})=> {
-                        if(index === id) {
+                    return info.map(({id, title, old_price, price, image, manufacturer, material, description})=> {
+                        if(params.id === id) {
                             return  (<div className={style.wrapper} key={id}>
                                         <div className={style.image}>
                                             <img     
@@ -154,13 +70,13 @@ const ProductPage = () => {
                                                 <div className={classNames(style.inner_column, style.column_gap)}>
                                                     <div className={style.buy_buttons}>
                                                         <MyButtonYellow 
-                                                            onClick={addToCart} 
+                                                            onClick={() => addToFavoriteOrCart(setData, data, pageID, source, setIsCart, 'cart', !isCart, setCart, cart)} 
                                                             isActive={isCart}
                                                         >
                                                             {!isCart ? "Add to Cart" : "Added to Cart"}
                                                         </MyButtonYellow>
                                                         <Heart 
-                                                            onClick={addToFavorite} 
+                                                            onClick={() => addToFavoriteOrCart(setData, data, pageID, source, setIsHeart, 'favorite', !isHeart, setFavorite, favorite)} 
                                                             className={!isHeart ? style.heart : style.heartActive}
                                                         ></Heart>
                                                     </div>

@@ -10,7 +10,6 @@ import imptyImage from '@assets/images/favorite/impty.png'
 const FavoritePage = ({category}) => {
     const [favorite, setFavorite, isLoadingFavorite] = useContext(AppContext)[3];
 
-    console.log(favorite)
     return (
         <>
             {
@@ -34,6 +33,7 @@ const FavoritePage = ({category}) => {
                                             favorite.map(elem => {
                                                 return <FavoriteItem
                                                         key={elem.id}
+                                                        id={elem.id}
                                                         elem={elem}
                                                         category={category}
                                                     />

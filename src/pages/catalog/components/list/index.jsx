@@ -3,7 +3,7 @@ import { AppContext } from '@API/context';
 import CatalogItem from '@components/itemCatalog';
 import style from './list.module.scss';
 
-const GalleryList = ({active}) => {
+const CatalogList = ({active}) => {
     const [catalog] = useContext(AppContext)[0];
     
     return (
@@ -11,11 +11,12 @@ const GalleryList = ({active}) => {
             { 
                 catalog.map(({category, info}, index) => {
                     if(index === active) {
-                        return (<div className={`${style.item} ${style.active}`} key={category}>
+                        return (<div className={`${style.item} ${style.active}`} key={index}>
                                 {
                                     info.map((elem) => {
                                         return <CatalogItem
                                                     key={elem.id}
+                                                    id={elem.id}
                                                     elem={elem}
                                                     category={category}
                                             />
@@ -30,7 +31,7 @@ const GalleryList = ({active}) => {
     );
 };
 
-export default GalleryList;
+export default CatalogList;
 
 
 
