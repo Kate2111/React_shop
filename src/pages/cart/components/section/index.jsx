@@ -8,6 +8,8 @@ import style from './section.module.scss'
 import del from '@assets/images/cart/delete_green.svg';
 
 const SectionCart = ({category}) => {
+    const [catalog, setCatalog] = useContext(AppContext)[0];
+    const [newCollection, setNewCollection] = useContext(AppContext)[1];
     const [cart, setCart] = useContext(AppContext)[2];
 
     const getSubTotal = () => {
@@ -46,10 +48,10 @@ const SectionCart = ({category}) => {
                                     return <CartItem
                                             key={elem.id}
                                             id={elem.id}
-                                            src={elem.image}
-                                            oldPrice={elem.old_price}
-                                            price={elem.price}
-                                            title={elem.title}
+                                            elem={elem}
+                                            data={elem.category === 'catalog' ? catalog : newCollection} 
+                                            setData={elem.category === 'catalog' ? setCatalog : setNewCollection}
+                                            source={elem.category === 'catalog' ? 'catalog' : 'newcollection'}
                                         />
                                 })
                             }

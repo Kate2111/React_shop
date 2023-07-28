@@ -22,7 +22,7 @@ const BlogList = () => {
                                     <a className={style.theme}href="/">{blog.theme}</a>
                                 </div>
 
-                                <a href="#">
+                                <a href="/">
                                     <h4 className={style.title}>{blog.title}</h4>
                                 </a>
                             </div>

@@ -5,7 +5,7 @@ const useProductState = (data, pageId) => {
     const [isCart, setIsCart] = useState(false);
     
     useEffect(() => {
-        function getValueFavorite () {
+        function getValueCatalogOrNewcoll () {
             data.forEach(({info}) => {
                 info.forEach((elem) => {
                     if(elem.id === pageId) {
@@ -14,9 +14,9 @@ const useProductState = (data, pageId) => {
                     }
                 })
             })
-        }
-    
-        getValueFavorite ();
+        }      
+
+        getValueCatalogOrNewcoll ()
     }, [data, pageId])
 
     return [isHeart, setIsHeart, isCart, setIsCart]

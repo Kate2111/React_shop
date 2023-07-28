@@ -7,22 +7,13 @@ import { AppContext } from '@API/context';
 import useProductState from '@hooks/useProductState';
 import { addToFavoriteOrCart } from '@utils/addToFavoriteOrCart';
 
-const CatalogItem = ({id, elem, category}) => {
+const CatalogItem = ({id, elem, category, data, setData, source}) => {
     const navigate = useNavigate();
-    const location = useLocation();//На таках страницах нужен другой способ передачи данных в useProductState
-   
-  
-    const [catalog, setCatalog] = useContext(AppContext)[0];
-    const [newCollection, setNewCollection] = useContext(AppContext)[1];
+
     const [cart, setCart] = useContext(AppContext)[2];
     const [favorite, setFavorite] = useContext(AppContext)[3];
 
-    const source = location.state && location.state.source; //catalog || newcollection
-    const data = source === 'newcollection' ? newCollection : catalog;
-    const setData = source === 'newcollection' ? setNewCollection : setCatalog;
-
     const [isHeart, setIsHeart, isCart, setIsCart] = useProductState(data, id);
-
 
     return (
         <div className={style.wrapper}>
@@ -41,10 +32,10 @@ const CatalogItem = ({id, elem, category}) => {
                         <Heart 
                             className={!isHeart ? style.icon : style.iconActive}
                             onClick={() => addToFavoriteOrCart(
-                                                                setData, 
-                                                                data, 
+                                                                setData, //catalog || newcollrction
+                                                                data, //catalog || newcollrction
                                                                 id, 
-                                                                source, 
+                                                                source, //catalog || newcollrction
                                                                 setIsHeart, 
                                                                 'favorite', 
                                                                 !isHeart, 

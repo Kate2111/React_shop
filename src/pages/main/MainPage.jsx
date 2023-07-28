@@ -7,6 +7,8 @@ import TopSection from './components/top';
 import DecorSection from './components/decor';
 
 const MainPage = () => {
+  const tabs = ['Bedroom furniture', 'Living room furniture', 'Office furniture', 'Dining room futniture', 'Chair']
+  
     return (<>
       <TopSection/>  
 
@@ -14,7 +16,7 @@ const MainPage = () => {
 
       <DecorSection/>
 
-      <GallerySection>
+      <GallerySection tabs={tabs}>
         <GalleryList/>
       </GallerySection>
 

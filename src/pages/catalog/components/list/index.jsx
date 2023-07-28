@@ -4,7 +4,7 @@ import CatalogItem from '@components/itemCatalog';
 import style from './list.module.scss';
 
 const CatalogList = ({active}) => {
-    const [catalog] = useContext(AppContext)[0];
+    const [catalog, setCatalog] = useContext(AppContext)[0];
     
     return (
         <>
@@ -19,6 +19,9 @@ const CatalogList = ({active}) => {
                                                     id={elem.id}
                                                     elem={elem}
                                                     category={category}
+                                                    data={catalog}
+                                                    setData={setCatalog}
+                                                    source='catalog'
                                             />
                                     })
                                 }

@@ -1,0 +1,28 @@
+@import '@assets/styles/_variables';
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--index) * 7.5) calc(var(--index) * 7.5);
+}
+
+.loginForm{
+    width: calc(var(--index) * 16);
+    padding: calc(var(--index) * 2) calc(var(--index) * 1);
+    background-color: #80808030;
+    border-radius: 10px;
+    box-shadow: 1px 1px 17px 1px #0000008c;
+}
+
+
+.item {
+    display: none;
+    flex-wrap: wrap;
+    gap: 52px;
+    justify-content: flex-start;
+}
+
+.active{
+    display: flex;
+}

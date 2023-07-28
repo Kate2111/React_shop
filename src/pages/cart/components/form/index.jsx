@@ -3,6 +3,7 @@ import MyButtonTab from '@components/UI/button/MyButtonTab'
 import MyButtonGreen from '@components/UI/button/green_button/MyButtonGreen';
 import style from './form.module.scss';
 import classNames from 'classnames';
+import Checkbox from '@components/UI/checkbox/Checkbox';
 
 const CartForm = ({subTotal, total}) => {
 
@@ -61,14 +62,7 @@ const CartForm = ({subTotal, total}) => {
                 <p className={style.subtitle}><span>Item Subtotal:</span> <span> {subTotalSum} $</span></p>
                 <p className={style.subtitle}><span> Amount of goods:</span> <span>3</span></p>
                 <p className={style.subtitle}><span> Discount:</span> <span>{discount} $</span></p>
-                <label 
-                    onClick={ handleLabelClick} 
-                    htmlFor="done" 
-                    className={style.lable}
-                >                        
-                    <input id="done" type="checkbox" />
-                    I have a promo code
-                </label>
+                <Checkbox onClick={handleLabelClick} text='I have a promo code'/>
                 <div className={!isDone ? style.hide : style.promoWrapper}>
                     <input 
                         className={inputClassName()} 

@@ -1,0 +1,22 @@
+.myModal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+.myModalWrapper{
+    padding: 25px;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.myModal.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

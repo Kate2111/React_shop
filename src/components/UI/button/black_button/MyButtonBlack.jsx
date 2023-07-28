@@ -1,10 +1,15 @@
 import React from 'react';
-import classes from './MyButtonBlack.module.scss'
+import style from './MyButtonBlack.module.scss'
 
 
-const MyButtonBlack = ({children, ...props}) => {
+
+const MyButtonBlack = ({children, type, ...props}) => {
     return (
-        <button className={classes.button} {...props}>
+        <button 
+            type={type}
+            className={style.button} 
+            {...props}
+        >
             {children}
         </button>
     );

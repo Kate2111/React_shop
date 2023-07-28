@@ -19,7 +19,7 @@ const Footer = () => {
                             </p>
                             <a className={style.link} href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
                             <form className={style.form}>
-                                <MyInput text={"Subscribe by email"}/>
+                                <MyInput text={"Subscribe by email"} type='text'/>
                                 <MyButtonBlack type={"submit"}>Send</MyButtonBlack>
                             </form>
                         </div>

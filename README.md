@@ -4,10 +4,13 @@
 - React
 - React Router
 - React Context
+- React Custom Hooks (useFetching, useProductState)
+- React Hooks (useState, useEffect, useContext)
 - react-slick
 - SASS / CSS Modules
-- Axios
-- AliExpress API
+- Firebase CRUD oparations (Create, Read, Delete, Update)
+- Firebase Store
+- Firebase Authentication(Email/Password, Google, Facebook)
 - Webpack
 - Swiper-slider
 - React Content Loader

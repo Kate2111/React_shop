@@ -5,8 +5,7 @@ import classNames from 'classnames';
 import style from './section.module.scss';
 
 
-const SectionWithTabs = ({children}) => {
-    const tabs = ['Bedroom furniture', 'Living room furniture', 'Office furniture', 'Dining room futniture', 'Chair']
+const SectionWithTabs = ({tabs, children}) => {
     const [active, setActive] = useState(1);
 
     const clonedChildren = React.Children.map(children, (child, index) => {
@@ -14,7 +13,7 @@ const SectionWithTabs = ({children}) => {
     });
 
     return (
-        <section className={style.gallery}>
+        <section>
           <div className="container-fluid">
             <div className={style.tabs}>
               {

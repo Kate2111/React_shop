@@ -1,0 +1,8 @@
+@import '@assets/styles/_variables';
+
+.lable{
+    display: flex;
+    gap: 10px;
+    font-size: calc(var(--index) * 0.65);
+    color: $greyCart;
+}

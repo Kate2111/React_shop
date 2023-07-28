@@ -16,11 +16,11 @@ const updateElemLocalDataList = (pageId, arr, propertyName, booleanValue) => {
 }
 
 //изменения favorite или cart
-const addNewElemCartOrFavorite = (pageId, arr, elem, propertyName) => {
+const addNewElemCartOrFavorite = (pageId, arr, elem, propertyName, source) => {
     const isElemPresent = arr.some(elem => elem.id === pageId);
 
     if (!isElemPresent) {
-        return [...arr, { ...elem, [propertyName]: true }];
+        return [...arr, { ...elem, [propertyName]: true, category: source}];
     }
 }
 
@@ -31,7 +31,7 @@ const updateFavoriteData = (setData, data, pageId, source, propertyName, isValue
     if(isValue) {
         postDataList(propertyName, updatedElem, updatedElem.id)
         updateElem(source, index, indexElem, propertyName, true);
-        setFavoriteOrCart(addNewElemCartOrFavorite(pageId, favoriteOrCart, elem, propertyName));
+        setFavoriteOrCart(addNewElemCartOrFavorite(pageId, favoriteOrCart, elem, propertyName, source));
         setData(updateElemLocalDataList(pageId, data, propertyName, true)); 
     } else {
         setFavoriteOrCart([...favoriteOrCart].filter(elem => elem.id !== pageId))
@@ -43,10 +43,10 @@ const updateFavoriteData = (setData, data, pageId, source, propertyName, isValue
 
 export const addToFavoriteOrCart = async(setData, data, pageId, source, setDataHeartOrCart, propertyName, isValue, setFavoriteOrCart, favoriteOrCart) => {
         await data.forEach(({ info }, index) => {
-        info.forEach((elem, indexElem) => {
-            if (elem.id === pageId) {
-                updateFavoriteData(setData, data, pageId, source,  propertyName, isValue, setFavoriteOrCart, favoriteOrCart, index, indexElem, elem);
-            }
+            info.forEach((elem, indexElem) => {
+                if (elem.id === pageId) {
+                    updateFavoriteData(setData, data, pageId, source,  propertyName, isValue, setFavoriteOrCart, favoriteOrCart, index, indexElem, elem);
+                }
         });
     });
 

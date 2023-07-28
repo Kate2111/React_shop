@@ -5,61 +5,38 @@ import style from './item.module.scss';
 import {ReactComponent as Heart} from '@assets/images/cart/heart.svg';
 import {ReactComponent as Remove} from '@assets/images/cart/delete.svg'
 import { AppContext } from '@API/context';
-import { deleteElemToDataList } from '@API/firebase';
+//import { deleteElemToDataList } from '@API/firebase';
 import useProductState from '@hooks/useProductState';
 import { addToFavoriteOrCart } from '@utils/addToFavoriteOrCart';
-import { useLocation } from 'react-router-dom';
+import { increment, decrement, deleteElem} from './utils'
 
-const CartItem = ({id, src, oldPrice, price, title}) => {
-    const location = useLocation();//На таках страницах нужен другой способ передачи данных в useProductState
-
-    const [catalog, setCatalog] = useContext(AppContext)[0];
-    const [newCollection, setNewCollection] = useContext(AppContext)[1];
+const CartItem = ({id, elem, data, setData, source}) => {
     const [cart, setCart] = useContext(AppContext)[2];
     const [favorite, setFavorite] = useContext(AppContext)[3];
-
-    const source = location.state && location.state.source; //catalog || newcollection
-    const data = source === 'newcollection' ? newCollection : catalog;
-    const setData = source === 'newcollection' ? setNewCollection : setCatalog;
 
     const [isHeart, setIsHeart] = useProductState(data, id);
 
     const [count, setCount] = useState(0);
     const [isRemove] = useState(false);
 
-    const increment = () => {
-        setCount(count + 1);
-      };
-    
-    const decrement = () => {
-    if (count > 0) {
-        setCount(count - 1);
-    }
-    };
-
-    const deleteElem = (recourse, index) => {
-        deleteElemToDataList(recourse, index);
-        setCart(cart.filter(elem => elem.id !== index));
-    }
-
     return (
         <div className={style.item}>
-            <img className={style.itemImg} src={src} alt={title} />
+            <img className={style.itemImg} src={elem.image} alt={elem.title} />
             <div className={style.itemInfo}>
                 <div className={style.product}>
-                    <p>{title}</p>
+                    <p>{elem.title}</p>
                     <p className={style.gray}>Product code: {id}</p>
                 </div>
                 <div className={style.option}>
                     <div className={style.buttons}>
                         <div className={style.counter}>
-                            <MyButtonWhite onClick={decrement}>-</MyButtonWhite>
+                            <MyButtonWhite onClick={() => decrement(setCount, count)}>-</MyButtonWhite>
                             <p>{count}</p>
-                            <MyButtonWhite onClick={increment}>+</MyButtonWhite>
+                            <MyButtonWhite onClick={() => increment(setCount, count)}>+</MyButtonWhite>
                         </div>
                         <div className={style.price}>
-                            <p className={style.newPrice}>{price} $</p>
-                            <p className={style.oldPrice}>{oldPrice} $</p>
+                            <p className={style.newPrice}>{elem.price} $</p>
+                            <p className={style.oldPrice}>{elem.old_price} $</p>
                         </div>
                     </div>
                     <div className={style.buttons}>
@@ -78,7 +55,18 @@ const CartItem = ({id, src, oldPrice, price, title}) => {
                         >
                             <Heart className={!isHeart ? style.image : style.imageActive}/>
                         </MyButtonCart>
-                        <MyButtonCart onClick={() => deleteElem('cart', id)} text='remove'>
+                        <MyButtonCart 
+                            text='remove'
+                            onClick={() => deleteElem(
+                                                        setCart, 
+                                                        cart,
+                                                        'cart', 
+                                                        id, 
+                                                        data, 
+                                                        setData, 
+                                                        source
+                                                    )} 
+                        >
                             <Remove className={!isRemove ? style.image : style.imageActive}/>
                         </MyButtonCart>
                     </div>
