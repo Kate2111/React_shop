@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './MyInput.module.scss';
 
-const MyInput = ({ type, text, value, onChange, ...props }) => {
+const MyInput = ({ value, onChange, type, text, isRight, ...props }) => {
     return (
       <input
-        className={style.input}
+        className={!isRight ? style.input : style.inputRed}
         type={type}
         placeholder={text}
         value={value}

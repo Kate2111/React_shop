@@ -1,13 +1,14 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {useParams, useLocation} from 'react-router-dom';
 import style from './ProductPage.module.scss';
 import {ReactComponent as Heart} from '@assets/images/product_page/Heart.svg';
 import MyButtonTab from '@components/UI/button/MyButtonTab';
 import MyButtonYellow from '@components/UI/button/yellow_button/MyButtonYellow';
+import Modal from '@components/UI/modal/Modal'
 import classNames from 'classnames';
 import { AppContext } from '@API/context';
-import { addToFavoriteOrCart } from '../../utils/addToFavoriteOrCart';
-import useProductState from '../../hooks/useProductState';
+import { addToFavoriteOrCart } from '@utils/addToFavoriteOrCart';
+import useProductState from '@hooks/useProductState';
 import SizeAndFeatures from './components/size-and-features';
 import IconsBank from './components/icons/bank';
 import IconsStars from './components/icons/stars';
@@ -26,11 +27,23 @@ const ProductPage = () => {
     const [cart, setCart] = useContext(AppContext)[2];
     const [favorite, setFavorite] = useContext(AppContext)[3];
 
+    const [auth] = useContext(AppContext)[4];
+    const [isShow, setIsShow] = useState(false);
+
     const source = location.state && location.state.source; //catalog || newcollection
     const data = source === 'newcollection' ? newCollection : catalog;
     const setData = source === 'newcollection' ? setNewCollection : setCatalog;
 
     const [isHeart, setIsHeart, isCart, setIsCart] = useProductState(data, pageID);
+
+    const handleIsAuth = (setData, data, pageId, source, setDataHeartOrCart, propertyName, isValue, setFavoriteOrCart, favoriteOrCart) => {
+        if(auth) {
+            addToFavoriteOrCart(setData, data, pageId, source, setDataHeartOrCart, propertyName, isValue, setFavoriteOrCart, favoriteOrCart)
+        } else {
+            setIsShow(true);
+        }
+    }
+
 
     return ( <>
         <div className='container'>
@@ -70,13 +83,13 @@ const ProductPage = () => {
                                                 <div className={classNames(style.inner_column, style.column_gap)}>
                                                     <div className={style.buy_buttons}>
                                                         <MyButtonYellow 
-                                                            onClick={() => addToFavoriteOrCart(setData, data, pageID, source, setIsCart, 'cart', !isCart, setCart, cart)} 
+                                                            onClick={() => handleIsAuth(setData, data, pageID, source, setIsCart, 'cart', !isCart, setCart, cart)} 
                                                             isActive={isCart}
                                                         >
                                                             {!isCart ? "Add to Cart" : "Added to Cart"}
                                                         </MyButtonYellow>
                                                         <Heart 
-                                                            onClick={() => addToFavoriteOrCart(setData, data, pageID, source, setIsHeart, 'favorite', !isHeart, setFavorite, favorite)} 
+                                                            onClick={() => handleIsAuth(setData, data, pageID, source, setIsHeart, 'favorite', !isHeart, setFavorite, favorite)} 
                                                             className={!isHeart ? style.heart : style.heartActive}
                                                         ></Heart>
                                                     </div>
@@ -97,6 +110,9 @@ const ProductPage = () => {
                     })
                 })
             }
+            <Modal visible={isShow} setVisible={setIsShow}>
+                <h3 className={style.message}>Log in to your personal account to add to cart and favorites</h3>
+            </Modal>
         </div>    
     </>
             

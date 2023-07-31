@@ -16,18 +16,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export const signUpUser = (email, password) => {
-    try{
-        createUserWithEmailAndPassword(auth, email, password);
-        sendEmailVerification(auth.currentUser);
-    } catch(err) {
-        console.log(err)
+export const signUpUser = async (email, password) => {
+    try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        sendEmailVerification(userCredential.user);
+    } catch (err) {
+        if (err.code === "auth/email-already-in-use") {
+            alert("Email is already in use. Please use a different email address.");
+            // Здесь вы можете предпринять дополнительные действия или показать сообщение пользователю
+        } else {
+            console.log("An error occurred during sign up:", err.message);
+            // Здесь также можно предпринять дополнительные действия или показать общее сообщение об ошибке
+        }
     }
 }
 
 export const logInUser = (email, password) => {
     try{
-        signInWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(auth, email, password).then(res => console.log(res))
     } catch (err) {
         console.log(err)
     }

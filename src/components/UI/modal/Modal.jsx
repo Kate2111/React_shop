@@ -1,4 +1,4 @@
-import classes from './Modal.module.css'
+import classes from './Modal.module.scss'
 
 const Modal = ({children, visible, setVisible}) => {
     const rootClass = [classes.myModal];

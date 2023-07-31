@@ -9,8 +9,8 @@
 }
 
 .myModalWrapper{
-    padding: 25px;
-    min-width: 300px;
+    padding: calc(var(--index) * 1);
+    min-width: calc(var(--index) * 10);
     background-color: white;
     border-radius: 16px;
 }

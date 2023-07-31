@@ -2,31 +2,44 @@ import React, { useContext, useState } from 'react';
 import FormSection from '@components/sectionWithTabs'
 import style from './login.module.scss'
 import ActiveContent from './activeContent';
-import { LoginContext } from '@API/context';
-import { signUpUser, logInUser, signOutUser, passwordReset } from '@API/auth';
+import Modal from '../../components/UI/modal/Modal';
+import MyButtonBlack from '../../components/UI/button/black_button/MyButtonBlack'
+import { AppContext } from '../../API/context';
+import { signOutUser } from '@API/auth';
 
-const LoginPage = () => {
+const LoginPage = ({visible, setVisible}) => {
     const content = [{checkbox: 'I agree with the terms and conditions of the site'}, {checkbox: 'Remember me'}]
-    /* const [email, setEmail] = useContext(LoginContext)[0];
-    const [password, setPassword]  = useContext(LoginContext)[1];
-    const [repeatPassword, setRepeatPassword] = useContext(LoginContext)[2];
+    const [auth, setAuth] = useContext(AppContext)[4];
 
-    const createNewUser = (e) => {
-        e.preventDefault();
-        signUpUser(email, password)
-    } */
+
+    const signOut = () => {
+        setAuth(false);
+        localStorage.removeItem('auth');  
+        signOutUser();
+        setVisible(false);
+    }
 
     return (
-        <div className="container">
-            <div className={style.wrapper}>
-                <form className={style.loginForm}  onClick={e => e.preventDefault()}>
+        <>
+            {
+                !auth
+                ?
+                <Modal visible={visible} setVisible={setVisible}>
                     <FormSection tabs={['Sign up', 'Log in']}>
-                        <ActiveContent content={content}/>
+                        <ActiveContent content={content} setVisible={setVisible}/>
                     </FormSection>
-                </form>
-            </div>
-        </div>
+                </Modal> 
+                :
+                <Modal visible={visible} setVisible={setVisible}>
+                    <MyButtonBlack onClick={signOut}>Sign out</MyButtonBlack>
+                </Modal>
+
+            }
+            
+           
+        </>
     );
 };
 
 export default LoginPage;
+

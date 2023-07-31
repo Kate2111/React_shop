@@ -67,5 +67,7 @@
     fill: $yellow;
 }
 
-
+.message {
+    font-size: calc(var(--index) * 1);
+}
 

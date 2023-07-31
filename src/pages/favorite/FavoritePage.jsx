@@ -11,14 +11,14 @@ const FavoritePage = ({category}) => {
     const [catalog, setCatalog] = useContext(AppContext)[0];
     const [newCollection, setNewCollection] = useContext(AppContext)[1];
     const [favorite, setFavorite, isLoadingFavorite] = useContext(AppContext)[3];
-
+    const [auth] = useContext(AppContext)[4];
 
     return (
         <>
             {
                 isLoadingFavorite
                 ? (<LoaderCircle/>)
-                :   favorite.length === 0
+                :   favorite.length === 0 || !auth
                     ?   (<ImptyCart  
                             title='Start Building Your List!'
                             subtitle='Add your favorite items, shops, and ideas to your list.'
@@ -39,7 +39,7 @@ const FavoritePage = ({category}) => {
                                                         id={elem.id}
                                                         elem={elem}
                                                         category={category}
-                                                        data={elem.category === 'catalog' ? catalog : newCollection} 
+                                                        data={elem.category === 'catalog' ? catalog : newCollection}
                                                         setData={elem.category === 'catalog' ? setCatalog : setNewCollection}
                                                         source={elem.category === 'catalog' ? 'catalog' : 'newcollection'}
                                                     />

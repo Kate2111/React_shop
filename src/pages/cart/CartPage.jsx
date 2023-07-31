@@ -8,13 +8,14 @@ import LoaderCircle from '@components/loaders/loaderCircle';
 
 const CartPage = ({category}) => {
     const [cart, setCart, isLoadingCatalog] = useContext(AppContext)[2];
+    const [auth] = useContext(AppContext)[4];
 
     return (
         <>
             {
                 isLoadingCatalog
                 ? (<LoaderCircle/>)
-                : cart.length === 0
+                : cart.length === 0 || !auth
                     ?   (<ImptyCart  
                             title='Your Shopping Cart Is Empty'
                             subtitle='Add your favorite items, shops, and ideas to your cart.'

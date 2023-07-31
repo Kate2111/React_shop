@@ -17,3 +17,12 @@
     opacity: 0.8;
 }
 
+.show{
+    display: inline;
+    font-size: calc(var(--index) * 0.6);
+    line-height: calc(var(--index) * 0.7);
+}
+
+.hide{
+    display: none;
+}
