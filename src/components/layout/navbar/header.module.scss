@@ -11,7 +11,11 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
-    align-items:center
+    align-items:center;
+    @media (max-width: 800px) {
+        height: 75px;
+        margin: 25px 0;
+    }
 }
 
 
@@ -34,13 +38,24 @@
     height: 20px;
 }
 
+.loginBtn{
+    background-color: transparent;
+    border: none;
+}
+
 .tel{
     color: black;
+    @media(max-width: 950px) {
+        display: none;
+    }
 }
 
 .tel_white {
     color: white;
     text-shadow: 1px 0px 0 #0000007a, -1px -1px 0 #0000008f, -1px 1px 0 #00000091, 1px 1px 0 #00000091;
+    @media(max-width: 950px) {
+        display: none;
+    }
 }
 
 .rightside-menu{

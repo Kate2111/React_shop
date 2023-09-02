@@ -9,6 +9,9 @@ import CartPage from './pages/cart/CartPage';
 import FavoritePage from './pages/favorite/FavoritePage';
 import LoginPage from './pages/login/LoginPage';
 import { useFetching } from './hooks/useFatching';
+import AboutPage from './pages/about/AboutPage';
+import BlogPage from './pages/blog/BlogPage';
+import ContactPage from './pages/contact/ContactPage';
 
 
 function App() {
@@ -55,6 +58,12 @@ function App() {
                     </LayoutPage>}
                 />
        
+                <Route exact path="/React_shop/about" element={
+                    <LayoutPage>
+                        <AboutPage/>
+                    </LayoutPage>}
+                />
+
                 <Route exact path="/React_shop/catalog" element={
                     <LayoutPage>
                         <CatalogPage/>
@@ -65,6 +74,18 @@ function App() {
                     <LayoutPage>
                         <ProductPage/>
                     </LayoutPage>} 
+                />
+
+                <Route exact path="/React_shop/blog" element={
+                    <LayoutPage>
+                      <BlogPage/>
+                    </LayoutPage>}
+                />
+
+                <Route exact path="/React_shop/contact" element={
+                    <LayoutPage>
+                      <ContactPage/>
+                    </LayoutPage>}
                 />
 
                 <Route exact path="/React_shop/cart" element={
@@ -81,7 +102,6 @@ function App() {
 
                 
                 <Route exact path="/React_shop/login" element={
-                 
                     <LayoutPage>
                         <LoginPage/>
                     </LayoutPage>

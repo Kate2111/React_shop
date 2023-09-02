@@ -2,12 +2,14 @@
 
 
 .social{
-    width: 125px;
-    margin-left: 100px;
-    margin-right: auto;
+    width: calc(var(--index) * 8);
+    margin: 0 calc(var(--index) * 4);
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @media (max-width: 767px) {
+        margin-left: 0;
+    }
 }
 
 .item{

@@ -2,20 +2,19 @@
 
 
 .items{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .linkImg{
     display: inline-block;
     margin-bottom: 20px;
-    height: 307px;
-    width: 539px;
+    width: 100%;
 }
 
 .img{
-    height: 100%;
-    width: 100%;
+    object-fit: contain;
 }
 
 .links{

@@ -4,15 +4,16 @@ import ItemLi from '../item/MenuItem';
 import logo from '@assets/images/first_page/logo.png';
 import {useNavigate} from 'react-router-dom';
 
-const MenuList = ({arr, isMain}) => {
+const MenuList = ({arr, isMain, isOpen, setOpen}) => {
     const navigate = useNavigate();
 
     return (
-        <nav className={style.menu}>
+        <nav className={!isOpen ? style.menu : style.sidebar}>
+
             <div className={!isMain ? style.showLogo : style.hideLogo} onClick={() => navigate(`/React_shop`)}>
                 <img src={logo} alt="logo"/>
             </div>
-            <ul className={style.list}>
+            <ul className={!isOpen ? style.list : style.sidelist}>
                 {
                     arr.map(item => {
                         return <ItemLi 
@@ -20,6 +21,7 @@ const MenuList = ({arr, isMain}) => {
                                     href={item.href} 
                                     text={item.text}
                                     isMain={isMain}
+                                    setOpen={setOpen}
                                 />
                     }) 
                 }

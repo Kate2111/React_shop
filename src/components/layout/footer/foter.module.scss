@@ -8,10 +8,18 @@
     display: flex;
     justify-content: space-between;
     padding: 60px 0 80px;
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: flex-start;
+    }
 }
 
 .info{
-    width: 539px;
+    width: calc(var(--index) * 25);
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .title{
