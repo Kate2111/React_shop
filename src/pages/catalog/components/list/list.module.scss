@@ -4,8 +4,12 @@
 .item {
     display: none;
     flex-wrap: wrap;
+    padding: 20px;
     gap: 52px;
     justify-content: flex-start;
+    @media(max-width: 700px) {
+        justify-content: center;
+    }
 }
 
 .active{

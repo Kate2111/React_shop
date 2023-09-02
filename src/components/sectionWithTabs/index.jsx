@@ -16,21 +16,23 @@ const SectionWithTabs = ({tabs, children}) => {
         <section>
           <div className="container-fluid">
             <div className={style.tabs}>
-              {
-                  tabs.map((tab, i) => {
-                      const tabClass = classNames(styleTab.tab, {
-                          [styleTab.active]: i === active,
-                        });
+              <div className={style.tabsContainer}>
+                {
+                    tabs.map((tab, i) => {
+                        const tabClass = classNames(styleTab.tab, {
+                            [styleTab.active]: i === active,
+                          });
 
-                      return  <MyButtonTab 
-                                  key={tab}
-                                  onClick={() => setActive(i)}
-                                  className={tabClass}
-                              >
-                                  {tab}
-                              </MyButtonTab>
-                  })
-              }
+                        return  <MyButtonTab 
+                                    key={tab}
+                                    onClick={() => setActive(i)}
+                                    className={tabClass}
+                                >
+                                    {tab}
+                                </MyButtonTab>
+                    })
+                }
+              </div>  
             </div>                      
 
             {clonedChildren}
