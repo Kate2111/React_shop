@@ -45,70 +45,23 @@ function App() {
     [repeatPassword, setRepeatPassword]
   ]
 
-  const [isMain] = useState(true);
   
   return (<>
     <AppContext.Provider value={contextValue}>
       <LoginContext.Provider value={loginValue}>
         <BrowserRouter>
             <Routes>
-                <Route exact path="/React_shop" element={
-                    <LayoutPage isMain={isMain}>
-                        <MainPage/>
-                    </LayoutPage>}
-                />
-       
-                <Route exact path="/React_shop/about" element={
-                    <LayoutPage>
-                        <AboutPage/>
-                    </LayoutPage>}
-                />
-
-                <Route exact path="/React_shop/catalog" element={
-                    <LayoutPage>
-                        <CatalogPage/>
-                    </LayoutPage>}
-                />
-
-                <Route exact path="/React_shop/catalog/:id" element={
-                    <LayoutPage>
-                        <ProductPage/>
-                    </LayoutPage>} 
-                />
-
-                <Route exact path="/React_shop/blog" element={
-                    <LayoutPage>
-                      <BlogPage/>
-                    </LayoutPage>}
-                />
-
-                <Route exact path="/React_shop/contact" element={
-                    <LayoutPage>
-                      <ContactPage/>
-                    </LayoutPage>}
-                />
-
-                <Route exact path="/React_shop/cart" element={
-                    <LayoutPage>
-                        <CartPage category='cart'/>
-                    </LayoutPage>}
-                />
-
-                <Route exact path="/React_shop/favorite" element={
-                    <LayoutPage>
-                        <FavoritePage  category='favorite'/>
-                    </LayoutPage>}
-                />
-
-                
-                <Route exact path="/React_shop/login" element={
-                    <LayoutPage>
-                        <LoginPage/>
-                    </LayoutPage>
-                  }
-                />
-               
-                
+                <Route path="/React_shop" element={<LayoutPage/>}>
+                    <Route index element={<MainPage />} />
+                    <Route path="about" element={<AboutPage />} />
+                    <Route path="catalog" element={<CatalogPage />} />
+                    <Route path="catalog/:id" element={<ProductPage />} />
+                    <Route path="blog" element={<BlogPage />} />
+                    <Route path="contact" element={<ContactPage />} />
+                    <Route path="cart" element={<CartPage category="cart" />} />
+                    <Route path="favorite" element={<FavoritePage category="favorite" />} />
+                    <Route path="login" element={<LoginPage />} />
+                </Route>
             </Routes>
         </BrowserRouter>
       </LoginContext.Provider>

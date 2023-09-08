@@ -3,7 +3,7 @@ import Hamburger from '../../../UI/hamburger/Hamburger';
 import MenuList from '../list/MenuList';
 import style from '../list/menuList.module.scss'
 
-const Menu = ({isMain}) => {
+const Menu = () => {
     const navigationButtons = [
         { text: 'About', href: '/React_shop/about', type: 'link'},  
         { text: 'Catalog', href: '/React_shop/catalog', type: 'link'},
@@ -23,10 +23,11 @@ const Menu = ({isMain}) => {
             window.removeEventListener('resize', handleResize)
         } 
     }, [visibleHamburger])
+
     return (
         <>
             {visibleHamburger >= 767 ? (
-                <MenuList arr={navigationButtons} isMain={isMain} isOpen={isOpen}/>
+                <MenuList arr={navigationButtons}/>
             ) : (
                 <>
                 <Hamburger toggled={isOpen} toggle={setOpen}/>
@@ -34,7 +35,7 @@ const Menu = ({isMain}) => {
                 && 
                 (<>
                     <div className={style.sideblur} onClick={() => setOpen(false)}/>
-                    <MenuList arr={navigationButtons} isMain={isMain} isOpen={isOpen} setOpen={setOpen}/>
+                    <MenuList arr={navigationButtons} isOpen={isOpen} setOpen={setOpen}/>
                 </>)
                 }
                 </>
